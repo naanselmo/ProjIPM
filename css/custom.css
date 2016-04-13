@@ -1,0 +1,335 @@
+#wrapper {
+    padding-left: 275px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.collapsed {
+    padding-left: 25px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 275px;
+    width: 275px;
+    height: 100%;
+    margin-left: -275px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+#wrapper.collapsed #sidebar-wrapper {
+    width: 25px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    margin-right: -250px;
+    padding: 15px;
+}
+
+#wrapper.collapsed #page-content-wrapper {
+    position: absolute;
+    margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 275px;
+    margin: 0;
+    padding: 0 0 7%;
+    list-style: none;
+}
+
+.sidebar-nav h4 {
+  color: lightgrey;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #999999;
+}
+
+.sidebar-nav li a {
+    padding: 4px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-nav li:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li:active,
+.sidebar-nav li:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav .sidebar-title {
+    color: #cdcdcd;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 275px;
+    }
+
+    #wrapper.collapsed {
+        padding-left: 25px;
+    }
+
+    #sidebar-wrapper {
+        width: 275px;
+    }
+
+    #wrapper.collapsed #sidebar-wrapper {
+        width: 25px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.collapsed #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.margin-boxed {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.white-background {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.full-height {
+    height: 100%;
+}
+
+.left-grad {
+	height: 10px;
+	width: 50%;
+	float: left;
+	background: white;
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: -o-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.right-grad {
+	height: 10px;
+	width: 50%;
+	float: right;
+	background: white;
+  background: -webkit-linear-gradient(left,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -o-linear-gradient(right,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -moz-linear-gradient(right,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.bordered-text {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fullscreen {
+	height: -o-calc(100vh - 70px); /* opera */
+	height: -webkit-calc(100vh - 70px); /* google, safari */
+	height: -moz-calc(100vh - 70px); /* firefox */
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: table;
+}
+
+.background-div {
+	z-index: -5;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.background-filter {
+	z-index: -4 !important;
+	background-color: rgba(42, 57, 83, 0.2);
+}
+
+.background-stretch {
+	background-size: cover;
+	background-position: center;
+}
+
+.align-bottom {
+	position: absolute !important;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.align-middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.align-top {
+	display: table-row;
+	vertical-align: top;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.unclickable {
+  pointer-events: none;
+  cursor: default;
+}
+
+.hidden {
+  width: 0 !important;
+}
+
+.border-black {
+    box-shadow: 0 0 15px #000;
+}
+
+.center-test {
+  float: none;
+  margin: 0 auto;
+}
+
+.contact-box {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.contact-box > a {
+  text-decoration: none;
+}
+
+
+body {
+  background-image: url("../images/background.png");
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  text-align: center;
+}
+
+header > img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 55px;
+}
+
+header > h1 {
+  color: lightgrey !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-top: 0px;
+  padding-top: 17px;
+  font-weight: bold;
+}
+
+.semi-transparent-white {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  background-image: none !important;
+}
+
+.semi-transparent-grey {
+  background-color: rgba(175, 175, 175, 0.5) !important;
+  background-image: none !important;
+}
+
+.semi-transparent-dark-grey {
+  background-color: rgba(125, 125, 125, 0.5) !important;
+  background-image: none !important;
+}
+
+.alumni-image {
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.alumni-image-rotated {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
+}
+
+.alumni-name {
+  color: white !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.alumni-name > small {
+  color: lightgrey !important;
+}
+
+.alumni-contact {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 54px;
+  color: white !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  overflow: hidden;
+}
+
+.alumni-contact:hover {
+  width: 85%;
+}
+
+.custom-well {
+  margin: 5px;
+  border-style: solid;
+  border-color: black;
+}
+
+.custom-button {
+  border-style: solid;
+  border-color: black;
+}
+
+.text-white {
+  color: white;
+  font-size: 50px;
+}

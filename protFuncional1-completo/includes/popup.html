@@ -1,0 +1,39 @@
+<!-- Dimmed background -->
+<div id="background-filter" class="center-wrapper background-filter hidden">
+  <!-- Small Popup -->
+  <div id="small-popup" class="col-lg-offset-4 col-lg-4 col-lg-offset-4 popup align-middle">
+    <div class="panel padded-medium border-black semi-transparent-grey">
+      <span class="fa fa-times fa-4x fa-inverse bordered-text"  onclick="hide_popup()"></span>
+    </div>
+  </div>
+
+  <!-- Medium Popup -->
+  <div id="medium-popup" class="col-lg-offset-3 col-lg-6 col-lg-offset-3 popup align-middle hidden">
+    <div class="panel padded-medium border-black semi-transparent-grey">
+      <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
+    </div>
+  </div>
+
+  <!-- Large Popup -->
+  <div id="large-popup" class="col-lg-offset-2 col-lg-8 col-lg-offset-2 popup align-middle hidden">
+    <div class="panel padded-medium border-black semi-transparent-grey">
+      <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function show_popup() {
+    if ($("#background-filter").hasClass("hidden")){
+      $("#background-filter").toggleClass("hidden");
+      // fadeIn();
+    }
+  }
+
+  function hide_popup() {
+    if (!$("#background-filter").hasClass("hidden")){
+      $("#background-filter").toggleClass("hidden");
+      // fadeOut();
+    }
+  }
+</script>
