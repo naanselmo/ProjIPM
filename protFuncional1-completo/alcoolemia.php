@@ -8,8 +8,7 @@
       <div id="middle" class="col-lg-6 align-middle">
         <div class="col-lg-12 text-center">
           <div class="panel padded-medium border-black semi-transparent-white">
-            <span class="fa fa-glass fa-5x fa-inverse bordered-text" onclick="updateAlcoholLevel()"></span>
-            <h1>Teste de Alcoolemia</h1>
+            <h1 onclick="updateAlcoholLevel()" >Teste de Alcoolemia</h1>
 
             <div class="panel-body">
               <div class="col-lg-2"></div>
@@ -26,6 +25,17 @@
         </div>
       </div>
       <div id="right" class="col-lg-3 align-middle"></div>
+
+      <div id="help-dialog" style="display: none;">
+        Expire para o ecrã para obter uma leitura do seu nível de álcool no sangue.
+        <br>
+        Indica também se ainda está ou não dentro do limite legal e quais a consequências de ser mandado parar pelas autoridades.
+        <br>
+        <br>
+        Para chamar um empregado carregue no botão da pessoa à esquerda do botão de ajuda.
+        <br>
+        Para aceder às definições da mesa carregue na engrenagem no canto inferior esquerdo.
+      </div>
     </div>
     <?php include("includes/popup.html");?>
     <?php include("includes/footer-submenu.html");?>
@@ -33,6 +43,8 @@
 
     <!-- Custom Script -->
     <script src="js/alcoolemia.js"></script>
-
+    <script>
+      set_help_dialog_element($('#help-dialog'));
+    </script>
   </body>
 </html>
