@@ -20,7 +20,9 @@
             bottom: 0;
             top: 0;
             /*Borda*/
-            margin: 50px;
+            margin: -o-calc((100vh - 800px)/2) -o-calc((100% - 1600px)/2); /* opera */
+          	margin: -webkit-calc((100vh - 800px)/2) -webkit-calc((100% - 1600px)/2); /* google, safari */
+          	margin: -moz-calc((100vh - 800px)/2) -moz-calc((100% - 1600px)/2); /* firefox */
         }
 
         /* Hack css para inner shadow*/
@@ -43,7 +45,7 @@
 </head>
 <body>
     <div>
-        <iframe width="100%" height="100%" frameborder="0" src="index.php"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" src="ecra.php"></iframe>
     </div>
 </body>
 </html>

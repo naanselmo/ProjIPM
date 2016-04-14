@@ -4,32 +4,48 @@
   <body>
     <?php include("includes/header.html");?>
     <div id="wrapper" class="center-wrapper container-fluid">
-      <div id="left" class="col-lg-2 align-middle"></div>
-      <div id="middle" class="col-lg-8 align-middle">
-        <div class="col-lg-4 text-center">
+      <div id="left" class="col-md-2 align-middle"></div>
+      <div id="middle" class="col-md-8 align-middle">
+        <div class="col-md-4 text-center">
           <div class="panel padded-medium border-black semi-transparent-white">
-            <h1>---</h1>
+            <br>
+            <br>
+            <h3>Pedidos</h3>
+            <br>
             <span class="fa fa-star-o fa-5x fa-inverse bordered-text"></span>
-            <p>(placeholder icon)</p>
+            <br>
+            <br>
+            <br>
           </div>
         </div>
-        <div class="col-lg-4 text-center">
+        <div class="col-md-4 text-center">
           <div class="panel padded-medium border-black semi-transparent-white">
-            <h1>---</h1>
+            <br>
+            <br>
+            <h3>Entretenimento</h3>
+            <br>
             <span class="fa fa-star-half-o fa-5x fa-inverse bordered-text"></span>
-            <p>(placeholder icon)</p>
+            <br>
+            <br>
+            <br>
           </div>
         </div>
-        <div class="col-lg-4 text-center">
+        <div class="col-md-4 text-center">
           <a href="alcoolemia.php">
             <div class="panel padded-medium border-black semi-transparent-white">
-              <h1>Teste de Alcoolemia</h1>
+              <br>
+              <br>
+              <h3>Teste de Alcoolemia</h3>
+              <br>
               <span class="fa fa-glass fa-5x fa-inverse bordered-text"></span>
+              <br>
+              <br>
+              <br>
             </div>
           </a>
         </div>
       </div>
-      <div id="right" class="col-lg-2 align-middle"></div>
+      <div id="right" class="col-md-2 align-middle"></div>
       <div id="help-dialog" style="display: none;">
         Neste menu pode escolher uma das seguintes opções:
         <ul>
