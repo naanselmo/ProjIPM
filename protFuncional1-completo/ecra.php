@@ -49,9 +49,9 @@
       <div id="help-dialog" style="display: none;">
         Neste menu pode escolher uma das seguintes opções:
         <ul>
-          <li>A primeira opção é para efetuar pedidos e pagamentos.</li>
-          <li>A segunda opção é para jogar jogos ou escolher a música ambiente do bar.</li>
-          <li>A terceira opção é para efetuar um teste de alcoolemia.</li>
+          <li>O botão de "Pedidos" é para efetuar pedidos e pagamentos.</li>
+          <li>O botão de "Entretenimento" é para jogar jogos ou escolher a música ambiente do bar.</li>
+          <li>O botão de "Teste de Alcoolemia" é para efetuar um teste de alcoolemia.</li>
         </ul>
         Para chamar um empregado carregue no botão da pessoa à esquerda do botão de ajuda.
         <br>
