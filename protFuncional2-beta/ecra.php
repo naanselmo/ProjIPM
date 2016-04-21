@@ -13,8 +13,8 @@
               <br>
               <h1 class="bold-text text-white bordered-text">Pedidos</h1>
               <br>
-              <span class="fa fa-cutlery fa-5x fa-inverse bordered-text"></span>
               <span class="fa fa-beer fa-5x fa-inverse bordered-text"></span>
+              <span class="fa fa-cutlery fa-5x fa-inverse bordered-text"></span>
               <br>
               <br>
               <br>
@@ -37,12 +37,13 @@
           </a>
         </div>
         <div class="col-md-4 text-center">
-          <a href="alcoolemia.php">
+          <a href="medicoes.php">
             <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
               <br>
               <br>
-              <h1 class="bold-text text-white bordered-text-small">Alcoolemia</h1>
+              <h1 class="bold-text text-white bordered-text-small">Medições</h1>
               <br>
+              <span class="fa fa-tint fa-5x fa-inverse bordered-text"></span>
               <span class="fa fa-heartbeat fa-5x fa-inverse bordered-text"></span>
               <br>
               <br>

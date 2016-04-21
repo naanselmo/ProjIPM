@@ -5,11 +5,11 @@ $(document).ready(function () {
 });
 
 $(document).on("click",".cart-add",function(e){
-  addOrder($(this).parent().parent().parent().attr("id"));
+  addOrder($(this).parents(".order").attr("id"));
 });
 
 $(document).on("click",".cart-remove",function(e){
-  removeOrder($(this).parent().parent().parent().attr("id"));
+  removeOrder($(this).parents(".order").attr("id"));
 });
 
 function addOrder(id, name, price) {
