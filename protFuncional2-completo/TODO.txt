@@ -1,0 +1,7 @@
+-> Titulo no header de cada seccao
+-> Texto maior nos pop-ups
+-> Botão de pedir
+-> Guardar pedido entre ecras - DONE
+-> Scrolls em pedidos e carrinhos - DONE
+-> Fazer medições - STARTED
+-> Adicionar trademark

@@ -25,7 +25,7 @@
     return $random;
   }
 
-  $highlights_foods = get_random($foods, 2);
+  $highlights_foods = get_random($foods, 4);
   $highlights_drinks = get_random($drinks, 2);
   $highlights = array_merge($highlights_foods, $highlights_drinks);
 
@@ -85,28 +85,28 @@
       </div>
 
       <div id="middle" class="col-md-7">
-        <div id="main">
-          <div class="col-md-12">
+        <div id="main" class="order-menu">
+          <div class="col-md-12 no-padding">
             <h2 id="name" class="text-white bordered-text-order">Recomendados</h2>
             <?php print_orders($highlights); ?>
           </div>
           <br>
           <br>
           <br>
-          <div class="col-md-12">
+          <div class="col-md-12 no-padding">
             <h2 id="name" class="text-white bordered-text-order">Mais pedidos</h2>
             <?php print_orders($top); ?>
           </div>
         </div>
-        <div id="drinks" class="hidden">
+        <div id="drinks" class="order-menu hidden">
           <h2 id="name" class="text-white bordered-text-order">Bebidas</h2>
           <?php print_orders($drinks); ?>
         </div>
-        <div id="foods" class="hidden">
+        <div id="foods" class="order-menu hidden">
           <h2 id="name" class="text-white bordered-text-order">Comidas</h2>
           <?php print_orders($foods); ?>
         </div>
-        <div id="others" class="hidden">
+        <div id="others" class="order-menu hidden">
           <h2 id="name" class="text-white bordered-text-order">Outros</h2>
           <?php print_orders($others); ?>
         </div>
@@ -121,7 +121,7 @@
         <br>
         <br>
         <br>
-        <div id="orders">
+        <div id="orders" class="orders">
           <div id="blank-order" class="col-md-12 order">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-5 text-center">
