@@ -1,0 +1,254 @@
+.margin-boxed {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.white-background {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.full-height {
+    height: 100%;
+}
+
+.left-grad {
+	height: 10px;
+	width: 50%;
+	float: left;
+	background: white;
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: -o-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: -moz-linear-gradient(right,rgba(255,255,255,0),rgba(255,255,255,1));
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.right-grad {
+	height: 10px;
+	width: 50%;
+	float: right;
+	background: white;
+  background: -webkit-linear-gradient(left,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -o-linear-gradient(right,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -moz-linear-gradient(right,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.bordered-text {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bordered-text-large {
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.bordered-text-order {
+	text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.background-div {
+	z-index: -5;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.background-filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+	z-index: 1 !important;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.background-stretch {
+	background-size: cover;
+	background-position: center;
+}
+
+.align-bottom {
+	position: absolute !important;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.align-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.align-middleish {
+  position: relative;
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+.align-top {
+	display: table-row;
+	vertical-align: top;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.unclickable {
+  pointer-events: none;
+  cursor: default;
+}
+
+.border-black {
+  box-shadow: 0 0 15px #000;
+}
+
+.border-black-button {
+  box-shadow: 0 0 4px #000;
+  padding: 7px 14px;
+  border-radius: 25px;
+}
+
+body {
+  background-image: url("../images/background.png");
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  text-align: center;
+}
+
+footer > div > a > .fa {
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+a, a:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.center-wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+  height: -o-calc(100vh - 200px); /* opera */
+	height: -webkit-calc(100vh - 200px); /* google, safari */
+	height: -moz-calc(100vh - 200px); /* firefox */
+  width: 100%
+}
+
+.semi-transparent-white {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  background-image: none !important;
+}
+
+.semi-transparent-grey {
+  background-color: rgba(175, 175, 175, 0.8) !important;
+  background-image: none !important;
+}
+
+.semi-transparent-dark-grey {
+  background-color: rgba(125, 125, 125, 0.8) !important;
+  background-image: none !important;
+}
+
+.padded-medium {
+  padding: 25px 25px 25px 25px;
+}
+
+.padded-small {
+  padding: 5px 5px 5px 5px;
+}
+
+.custom-well {
+  margin: 5px;
+  border-style: solid;
+  border-color: black;
+}
+
+.custom-button {
+  border-style: solid;
+  border-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.popup {
+	z-index: 2 !important;
+}
+
+.rounded-corner {
+  border-radius: 75px;
+}
+
+.rounded-corner-smaller {
+  border-radius: 25px;
+}
+
+.order-text {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 50px;
+}
+
+#search {
+  border-radius: 100px;
+}
+
+.align-icon {
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+.sidemenu-item {
+  margin: 5px;
+}
+
+.order-item {
+}
+
+.cart-item {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.cart-add-remove {
+  display: inline-block;
+  margin: 5px;
+}
+
+.inline {
+  display: inline;
+}
+
+#blank-order {
+  display: none !important;
+}
+
+/* * * * * * * * * * * * *
+!!! INCLUDES SECTION! !!!
+* * * * * * * * * * * * */

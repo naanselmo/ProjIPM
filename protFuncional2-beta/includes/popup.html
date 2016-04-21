@@ -1,0 +1,103 @@
+<style>
+    #popup-text{
+        max-height: 30%;
+        overflow: auto;
+    }
+    #close{
+        position: absolute; top: 25px; right: 8%;
+    }
+    #popup-title{
+        margin-top: 0;
+    }
+    #background-filter{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+</style>
+
+<!-- Dimmed background -->
+<div id="background-filter" class="center-wrapper background-filter hidden">
+    <!-- Small Popup -->
+    <div id="small-popup" class="col-md-offset-4 col-md-4 col-md-offset-4 popup align-middle">
+        <div class="panel padded-medium border-black semi-transparent-grey">
+            <span id="close" class="fa fa-times fa-3x fa-inverse bordered-text" onclick="hide_popup()"></span>
+            <h1 id="popup-title"></h1>
+            <div id="popup-text">
+            </div>
+        </div>
+    </div>
+
+    <!-- Medium Popup -->
+    <div id="medium-popup" class="col-md-offset-3 col-md-6 col-md-offset-3 popup align-middle hidden">
+        <div class="panel padded-medium border-black semi-transparent-grey">
+            <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
+        </div>
+    </div>
+
+    <!-- Large Popup -->
+    <div id="large-popup" class="col-md-offset-2 col-md-8 col-md-offset-2 popup align-middle hidden">
+        <div class="panel padded-medium border-black semi-transparent-grey">
+            <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var help_dialog = "Ajuda sobre esta página ainda não se encontra disponivel.";
+
+    /**
+     * Sets the inside html of the #popout-text to the one given.
+     * @param html The html to use as inside html in #popup-text.
+     */
+    function set_help_dialog_html(html){
+        help_dialog = html;
+    }
+
+    /**
+     * Copies the element's inside html to the popup text in help dialog.
+     * @param element Element to copy the inside html of.
+     */
+    function set_help_dialog_element(element){
+        set_help_dialog_html(element.html());
+    }
+
+    /**
+     * Show the help popup with the current help_dialog html as the #popup-text html.
+     */
+    function show_help(){
+        $('#popup-title').text("Ajuda");
+        $('#popup-text').html(help_dialog);
+        show_popup();
+    }
+
+    /**
+     * Shows the call a waiter dialog popup.
+     */
+    function call_waiter(){
+        $('#popup-title').text("Empregado");
+        $('#popup-text').html("Um empregado vira a seu encontro dentro de um breve momento.<br> Agradecemos a sua paciência.");
+        show_popup();
+    }
+
+    /**
+     * Shows the popup with the current text.
+     */
+    function show_popup() {
+        if ($("#background-filter").hasClass("hidden")) {
+            $("#background-filter").toggleClass("hidden");
+            // fadeIn();
+        }
+    }
+
+    /**
+     * Hides the popup.
+     */
+    function hide_popup() {
+        if (!$("#background-filter").hasClass("hidden")) {
+            $("#background-filter").toggleClass("hidden");
+            // fadeOut();
+        }
+    }
+</script>
