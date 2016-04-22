@@ -1,3 +1,5 @@
+// Melhoria de Funcionalidade 2
+
 -> Titulo no header de cada seccao
 -> Texto maior nos pop-ups
 -> Botão de pedir
@@ -5,3 +7,8 @@
 -> Scrolls em pedidos e carrinhos - DONE
 -> Fazer medições - STARTED
 -> Adicionar trademark
+-> Highlight no selecionado no menu pedidos
+
+// Funcionalidade 3
+
+-> Fazer funcionalidade 3
