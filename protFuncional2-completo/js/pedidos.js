@@ -13,13 +13,34 @@ $(document).ready(function () {
   dynamic = false;
   $('#search').keyup(function (handler) {
     // When it empties, clear the search no matter what
-    if (this.value.length === 0) {
+    if (this.value.length == 0) {
       search('');
       return;
     }
     // If its not dynamic wait for user to press enter to make the search
     if (dynamic || handler.keyCode == 13)
       search(this.value);
+  });
+
+  // Add change listener to sort select.
+  $(".sort-select").change(function (event) {
+    // Get the id of the section where the select that fired the event is.
+    var section_id = $(this).parents('.order-section').attr("id");
+    // Get the selected value.
+    var selected_value = $(this).val();
+    // Fetch the arguments of the sort functions.
+    var args = selected_value.split(";");
+    var type = args[0];
+    var asc = parseInt(args[1]);
+
+    // Sort based on the parameters fetched.
+    switch (type){
+      case 'price':
+        sortByPrice(section_id, asc);
+        break;
+      case 'name':
+        sortByName(section_id, asc);
+    }
   });
 });
 
@@ -211,7 +232,7 @@ function showSearchResults() {
  */
 function restoreFromSearch() {
   // Restores only if search menu is visible.
-  if (!$('#search-results').hasClass('hidden')){
+  if (!$('#search-results').hasClass('hidden')) {
     // Get the id of the last active menu before search.
     var lastActiveMenuBeforeSearchId = lastActiveMenuBeforeSearch.attr('id');
     // Switch all the ids and show the correct menu for that id.
@@ -235,7 +256,7 @@ function restoreFromSearch() {
 /**
  * Hides the search results.
  */
-function hideSearchResults(){
+function hideSearchResults() {
   // Hide the search results menu.
   $('#search-results').addClass('hidden');
 }
@@ -253,7 +274,7 @@ function saveOrder() {
 function loadOrder() {
   var loaded_html = localStorage.getItem('order_state');
   // Check if loaded order list exists and has blank-order id somewhere
-  if (loaded_html != null && loaded_html.indexOf('blank-order') > -1) {
+  if (loaded_html !== null && loaded_html.indexOf('blank-order') > -1) {
     $('#orders').html(loaded_html);
   } else {
     console.log('Invalid list loaded. Resetting...');
@@ -278,11 +299,11 @@ function search(search) {
     order_items.filter(function () {
       var id = $(this).attr('id');
       // If id is duplicate don't accept it
-      if(filteredIds.hasOwnProperty(id))
+      if (filteredIds.hasOwnProperty(id))
         return false;
 
       // If the name in lowercase contains the search string in lowercase, add it to the ids array and accept it.
-      if ($(this).find('.order-text #name').text().toLowerCase().indexOf(search.toLowerCase()) > -1){
+      if ($(this).find('.order-text #name').text().toLowerCase().indexOf(search.toLowerCase()) > -1) {
         filteredIds[id] = true;
         return true;
       }
@@ -298,10 +319,11 @@ function search(search) {
 
 /**
  * Sorts all order-sections by name.
+ * @param order_section_id The id of the section to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByName(asc) {
-  $('.order-section').each(function () {
+function sortByName(order_section_id, asc) {
+  $('#'+order_section_id).each(function () {
     $(this).children('.order-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.order-item #name').text();
       var name_b = $(b).find('.order-item #name').text();
@@ -312,10 +334,11 @@ function sortByName(asc) {
 
 /**
  * Sorts all order-sections by price.
+ * @param order_section_id The id of the section to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByPrice(asc) {
-  $('.order-section').each(function () {
+function sortByPrice(order_section_id, asc) {
+  $('#'+order_section_id).each(function () {
     $(this).children('.order-item-wrapper').sort(function (a, b) {
       var price_a = $(a).find('.order-item #price').text();
       var price_b = $(b).find('.order-item #price').text();
@@ -324,29 +347,4 @@ function sortByPrice(asc) {
       return (price_a - price_b) * asc;
     }).detach().appendTo($(this));
   });
-}
-
-/**
- * Sort the orders from which it was called
- */
-function sortOrders() {
-  var currentSort = 0;
-  currentSort %= 4;
-  currentSort++;
-
-  // Obter de onde vem? Fazer algo? Dunno
-
-  if (currentSort == 1) { // Ordem Alfabética (Ascending)
-    // sortButton.text("&#xF15D Ordenar");
-    // ordenar somehow
-  } else if (currentSort == 2) { // Ordem Alfabética (Descending)
-    // sortButton.text("&#xF15E Ordenar");
-    // ordenar somehow
-  } else if (currentSort == 3) { // Ordem Preço (Ascending)
-    // sortButton.text("&#xF162 Ordenar");
-    // ordenar somehow
-  } else if (currentSort == 4) { // Ordem Preço (Descending)
-    // sortButton.text("&#xF163 Ordenar");
-    // ordenar somehow
-  }
 }

@@ -79,7 +79,18 @@
   }
 
   function print_sort_button(){ ?>
-    <h3 class="text-white bordered-text-small sort-button" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>&#xF15D Ordenar</h3>
+    <div class="sort-button">
+      <div class="dropdown">
+        <select class="dropdown-select sort-select">
+          <option value="none;0">Ordenar por…</option>
+          <option value="price;1">Menor preço primeiro</option>
+          <option value="price;-1">Maior preço primeiro</option>
+          <option value="name;1">Order alfabética [A-Z]</option>
+          <option value="name;-1">Order alfabética [Z-A]</option>
+        </select>
+      </div>
+    </div>
+<!--    <h3 class="text-white bordered-text-small sort-button" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>&#xF15D Ordenar</h3>-->
   <?php } ?>
 
 <!DOCTYPE html>
