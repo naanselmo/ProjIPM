@@ -6,29 +6,13 @@
     <div id="wrapper" class="center-wrapper container-fluid">
       <div id="left" class="col-md-2 align-middle"></div>
       <div id="middle" class="col-md-8 align-middle">
-        <div class="col-md-4 text-center">
+        <div class="col-md-offset-2 col-md-4 text-center">
           <a href="pedidos.php">
             <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
               <br>
               <br>
-              <h1 class="bold-text text-white bordered-text">Pedidos</h1>
+              <h1 class="bold-text text-white bordered-text">Jukebox</h1>
               <br>
-              <span class="fa fa-beer fa-5x fa-inverse bordered-text"></span>
-              <span class="fa fa-cutlery fa-5x fa-inverse bordered-text"></span>
-              <br>
-              <br>
-              <br>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 text-center">
-          <a href="entretenimento.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
-              <br>
-              <br>
-              <h1 class="bold-text text-white bordered-text">Entretenimento</h1>
-              <br>
-              <span class="fa fa-gamepad fa-5x fa-inverse bordered-text"></span>
               <span class="fa fa-music fa-5x fa-inverse bordered-text"></span>
               <br>
               <br>
@@ -37,14 +21,13 @@
           </a>
         </div>
         <div class="col-md-4 text-center">
-          <a href="medicoes.php">
+          <a href="pedidos.php">
             <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
               <br>
               <br>
-              <h1 class="bold-text text-white bordered-text-small">Medições</h1>
+              <h1 class="bold-text text-white bordered-text-small">Jogos</h1>
               <br>
-              <span class="fa fa-tint fa-5x fa-inverse bordered-text"></span>
-              <span class="fa fa-heartbeat fa-5x fa-inverse bordered-text"></span>
+              <span class="fa fa-gamepad fa-5x fa-inverse bordered-text"></span>
               <br>
               <br>
               <br>

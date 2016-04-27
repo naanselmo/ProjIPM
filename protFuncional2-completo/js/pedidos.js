@@ -13,7 +13,7 @@ $(document).ready(function () {
   dynamic = false;
   $('#search').keyup(function (handler) {
     // When it empties, clear the search no matter what
-    if (this.value.length == 0) {
+    if (this.value.length === 0) {
       search('');
       return;
     }
@@ -286,7 +286,7 @@ function loadOrder() {
  * Ignores case.
  */
 function search(search) {
-  if (search != '') {
+  if (search !== '') {
     // If people are searching...
     searchMenu = $('#search-results');
 
