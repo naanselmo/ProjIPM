@@ -3,6 +3,13 @@
     "hamburger" => array("Hamburger", "hamburger.png", "12€"),
     "steak" => array("Steak", "hamburger.png", "7€"),
     "pizza" => array("Pizza", "hamburger.png", "9€"),
+    "chips" => array("Chips", "hamburger.png", "9€"),
+    "nachos" => array("Nachos", "hamburger.png", "9€"),
+    "mozzarella_sticks" => array("Mozzarella Sticks", "hamburger.png", "9€"),
+    "onion_rings" => array("Onion Rings", "hamburger.png", "9€"),
+    "chicken_wings" => array("Chicken Wings", "hamburger.png", "9€"),
+    "grilled_cheese_sandwich" => array("Grilled Cheese Sandwich", "hamburger.png", "9€"),
+    "calamari" => array("Calamari", "hamburger.png", "9€"),
     "empty_plate" => array("Empty Plate", "hamburger.png", "99€")
   );
 
@@ -11,7 +18,29 @@
     "gin" => array("Gin", "hamburger.png", "21€"),
     "tequila" => array("Tequila", "hamburger.png", "15€"),
     "vodka" => array("Vodka", "hamburger.png", "6€"),
-    "wine" => array("Wine", "hamburger.png", "8€")
+    "rum" => array("Rum", "hamburger.png", "17€"),
+    "absinthe" => array("Absinthe", "hamburger.png", "21€"),
+    "whisky" => array("Whisky", "hamburger.png", "21€"),
+    "armagnac" => array("Armagnac", "hamburger.png", "21€"),
+    "cognac" => array("Cognac", "hamburger.png", "21€"),
+    "champagne" => array("Champagne", "hamburger.png", "21€"),
+    "apple_cider" => array("Apple Cider", "hamburger.png", "21€"),
+    "sake" => array("Sake", "hamburger.png", "21€"),
+    "manhattan" => array("Manhattan", "hamburger.png", "21€"),
+    "bourbon" => array("Bourbon", "hamburger.png", "21€"),
+    "martini" => array("Martini", "hamburger.png", "21€"),
+    "tom_collins" => array("Tom Collins", "hamburger.png", "21€"),
+    "daiquiri" => array("Daiquiri", "hamburger.png", "21€"),
+    "mojito" => array("Mojito", "hamburger.png", "21€"),
+    "pina_colada" => array("Piña Colada", "hamburger.png", "21€"),
+    "bloody_mary" => array("Bloody Mary", "hamburger.png", "21€"),
+    "appletini" => array("Appletini", "hamburger.png", "21€"),
+    "cosmopolitan" => array("Cosmopolitan", "hamburger.png", "21€"),
+    "sex_on_the_beach" => array("Sex on the Beach", "hamburger.png", "21€"),
+    "margarita" => array("Margarita", "hamburger.png", "21€"),
+    "red_wine" => array("Red Wine", "hamburger.png", "21€"),
+    "white_wine" => array("White Wine", "hamburger.png", "8€"),
+    "empty_cup" => array("Empty Cup", "hamburger.png", "99€")
   );
 
   $others = array(
@@ -25,7 +54,7 @@
     return $random;
   }
 
-  $highlights_foods = get_random($foods, 4);
+  $highlights_foods = get_random($foods, 2);
   $highlights_drinks = get_random($drinks, 2);
   $highlights = array_merge($highlights_foods, $highlights_drinks);
 
@@ -48,7 +77,10 @@
       </div>
     <?php endforeach;
   }
-?>
+
+  function print_sort_button(){ ?>
+    <h3 class="text-white bordered-text-small sort-button" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>&#xF15D Ordenar</h3>
+  <?php } ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +91,7 @@
       <div id="left" class="col-md-2 align-middleish">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="sidemenu-item">
-            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome" />
+            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'/>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showMain()">
@@ -94,19 +126,22 @@
           <br>
           <br>
           <div class="col-md-12 no-padding order-section">
-            <h2 id="name" class="text-white bordered-text-order">Mais pedidos</h2>
+            <h2 id="name" class="text-white bordered-text-order">Mais populares</h2>
             <?php print_orders($top); ?>
           </div>
         </div>
         <div id="drinks" class="order-menu order-section hidden">
+          <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-order">Bebidas</h2>
           <?php print_orders($drinks); ?>
         </div>
         <div id="foods" class="order-menu order-section hidden">
+          <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-order">Comidas</h2>
           <?php print_orders($foods); ?>
         </div>
         <div id="others" class="order-menu order-section hidden">
+          <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-order">Outros</h2>
           <?php print_orders($others); ?>
         </div>

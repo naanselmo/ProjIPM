@@ -13,7 +13,7 @@ $(document).ready(function () {
   dynamic = false;
   $('#search').keyup(function (handler) {
     // When it empties, clear the search no matter what
-    if (this.value.length == 0) {
+    if (this.value.length === 0) {
       search('');
       return;
     }
@@ -324,4 +324,29 @@ function sortByPrice(asc) {
       return (price_a - price_b) * asc;
     }).detach().appendTo($(this));
   });
+}
+
+/**
+ * Sort the orders from which it was called
+ */
+function sortOrders() {
+  var currentSort = 0;
+  currentSort %= 4;
+  currentSort++;
+
+  // Obter de onde vem? Fazer algo? Dunno
+
+  if (currentSort == 1) { // Ordem Alfabética (Ascending)
+    // sortButton.text("&#xF15D Ordenar");
+    // ordenar somehow
+  } else if (currentSort == 2) { // Ordem Alfabética (Descending)
+    // sortButton.text("&#xF15E Ordenar");
+    // ordenar somehow
+  } else if (currentSort == 3) { // Ordem Preço (Ascending)
+    // sortButton.text("&#xF162 Ordenar");
+    // ordenar somehow
+  } else if (currentSort == 4) { // Ordem Preço (Descending)
+    // sortButton.text("&#xF163 Ordenar");
+    // ordenar somehow
+  }
 }

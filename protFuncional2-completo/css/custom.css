@@ -261,6 +261,7 @@ a, a:hover {
 
 /* Order screen */
 .order-menu {
+  position: relative;
   overflow-y: scroll;
   height: -o-calc(100vh - 215px); /* opera */
   height: -webkit-calc(100vh - 215px); /* google, safari */
@@ -314,6 +315,12 @@ a, a:hover {
 .cart-item {
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.sort-button {
+  position: absolute;
+  right: 30px;
+  top: 0px;
 }
 
 /* * * * * * * * * * * * *

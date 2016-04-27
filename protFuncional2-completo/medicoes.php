@@ -6,7 +6,7 @@
     <div id="wrapper" class="center-wrapper container-fluid">
       <div id="left" class="col-md-1 align-middle"></div>
       <div id="middle" class="col-md-10 align-middle">
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center" style="position: relative; top: 10px;">
           <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
             <h1 class="bold-text text-white bordered-text" onclick="updateAlcoholLevel()">Teste de Alcoolemia</h1>
             <div class="panel-body">
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center" style="position: relative; top: 13px;">
           <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
             <h1 class="bold-text text-white bordered-text" onclick="updateHeartrate()">Batimentos Cardíacos</h1>
             <div class="panel-body">
