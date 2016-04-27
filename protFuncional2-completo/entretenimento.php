@@ -8,7 +8,7 @@
       <div id="middle" class="col-md-8 align-middle">
         <div class="col-md-offset-2 col-md-4 text-center">
           <a href="pedidos.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
+            <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
               <h1 class="bold-text text-white bordered-text">Jukebox</h1>
@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-4 text-center">
           <a href="pedidos.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
+            <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
               <h1 class="bold-text text-white bordered-text-small">Jogos</h1>

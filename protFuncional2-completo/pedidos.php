@@ -159,7 +159,7 @@
       </div>
 
       <div id="right" class="col-md-3">
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2" style="position: relative; top: 30px;">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2" style="position: relative; top: 22px;">
           <span class="fa fa-shopping-cart fa-3x fa-inverse bordered-text pull-left align-icon"></span>
           <span><h2 class="bold-text text-white bordered-text-small inline">Carrinho</h2></span>
         </div>
@@ -186,6 +186,11 @@
             </div>
           </div>
         </div>
+        <br>
+        <div class="panel padded-medium border-black semi-transparent-white rounded-corner text-center">
+            <h2 id="text" class="text-white bordered-text inline" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>&#xF00C Efectuar Pedido</h2>
+        </div>
+
       </div>
 
       <div id="help-dialog" style="display: none;">

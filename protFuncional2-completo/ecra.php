@@ -8,7 +8,7 @@
       <div id="middle" class="col-md-8 align-middle">
         <div class="col-md-4 text-center">
           <a href="pedidos.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
+            <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
               <h1 class="bold-text text-white bordered-text">Pedidos</h1>
@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-4 text-center">
           <a href="entretenimento.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
+            <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
               <h1 class="bold-text text-white bordered-text">Entretenimento</h1>
@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-4 text-center">
           <a href="medicoes.php">
-            <div class="panel padded-medium border-black semi-transparent-white rounded-corner">
+            <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
               <h1 class="bold-text text-white bordered-text-small">Medições</h1>
