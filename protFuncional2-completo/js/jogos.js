@@ -36,9 +36,6 @@ $(document).ready(function () {
 
     // Sort based on the parameters fetched.
     switch (type){
-      case 'price':
-        sortByPrice(section_id, asc);
-        break;
       case 'name':
         sortByName(section_id, asc);
     }
@@ -133,11 +130,11 @@ function showMain() {
   if ($("#main").hasClass("hidden")) {
     $("#main").removeClass("hidden");
   }
-  if (!$("#foods").hasClass("hidden")) {
-    $("#foods").addClass("hidden");
+  if (!$("#singleplayer").hasClass("hidden")) {
+    $("#singleplayer").addClass("hidden");
   }
-  if (!$("#drinks").hasClass("hidden")) {
-    $("#drinks").addClass("hidden");
+  if (!$("#multiplayer").hasClass("hidden")) {
+    $("#multiplayer").addClass("hidden");
   }
   if (!$("#others").hasClass("hidden")) {
     $("#others").addClass("hidden");
@@ -147,20 +144,20 @@ function showMain() {
   hideSearchResults();
 }
 
-function showFoods() {
-  // Change the highlight to foods menu
+function showSingleplayer() {
+  // Change the highlight to singleplayer menu
   $('.active-option').removeClass('active-option');
-  $('#foods-option').addClass('active-option');
+  $('#singleplayer-option').addClass('active-option');
 
-  // Change to the foods menu
+  // Change to the singleplayer menu
   if (!$("#main").hasClass("hidden")) {
     $("#main").addClass("hidden");
   }
-  if ($("#foods").hasClass("hidden")) {
-    $("#foods").removeClass("hidden");
+  if ($("#singleplayer").hasClass("hidden")) {
+    $("#singleplayer").removeClass("hidden");
   }
-  if (!$("#drinks").hasClass("hidden")) {
-    $("#drinks").addClass("hidden");
+  if (!$("#multiplayer").hasClass("hidden")) {
+    $("#multiplayer").addClass("hidden");
   }
   if (!$("#others").hasClass("hidden")) {
     $("#others").addClass("hidden");
@@ -170,46 +167,23 @@ function showFoods() {
   hideSearchResults();
 }
 
-function showDrinks() {
-  // Change the highlight to drinks menu
+function showMultiplayer() {
+  // Change the highlight to multiplayer menu
   $('.active-option').removeClass('active-option');
-  $('#drinks-option').addClass('active-option');
+  $('#multiplayer-option').addClass('active-option');
 
-  // Change to the drinks menu
+  // Change to the multiplayer menu
   if (!$("#main").hasClass("hidden")) {
     $("#main").addClass("hidden");
   }
-  if (!$("#foods").hasClass("hidden")) {
-    $("#foods").addClass("hidden");
+  if (!$("#singleplayer").hasClass("hidden")) {
+    $("#singleplayer").addClass("hidden");
   }
-  if ($("#drinks").hasClass("hidden")) {
-    $("#drinks").removeClass("hidden");
+  if ($("#multiplayer").hasClass("hidden")) {
+    $("#multiplayer").removeClass("hidden");
   }
   if (!$("#others").hasClass("hidden")) {
     $("#others").addClass("hidden");
-  }
-
-  // Hide search results.
-  hideSearchResults();
-}
-
-function showOthers() {
-  // Change the highlight to others menu
-  $('.active-option').removeClass('active-option');
-  $('#others-option').addClass('active-option');
-
-  // Change to the other menu
-  if (!$("#main").hasClass("hidden")) {
-    $("#main").addClass("hidden");
-  }
-  if (!$("#foods").hasClass("hidden")) {
-    $("#foods").addClass("hidden");
-  }
-  if (!$("#drinks").hasClass("hidden")) {
-    $("#drinks").addClass("hidden");
-  }
-  if ($("#others").hasClass("hidden")) {
-    $("#others").removeClass("hidden");
   }
 
   // Hide search results.
@@ -245,11 +219,11 @@ function restoreFromSearch() {
       case 'main':
         showMain();
         break;
-      case 'drinks':
-        showDrinks();
+      case 'multiplayer':
+        showMultiplayer();
         break;
-      case 'foods':
-        showFoods();
+      case 'singleplayer':
+        showSingleplayer();
         break;
       case 'others':
         showOthers();
@@ -333,23 +307,6 @@ function sortByName(order_section_id, asc) {
       var name_a = $(a).find('.order-item #name').text();
       var name_b = $(b).find('.order-item #name').text();
       return name_a.localeCompare(name_b) * asc;
-    }).detach().appendTo($(this));
-  });
-}
-
-/**
- * Sorts all order-sections by price.
- * @param order_section_id The id of the section to order.
- * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
- */
-function sortByPrice(order_section_id, asc) {
-  $('#'+order_section_id).each(function () {
-    $(this).children('.order-item-wrapper').sort(function (a, b) {
-      var price_a = $(a).find('.order-item #price').text();
-      var price_b = $(b).find('.order-item #price').text();
-      price_a = parseInt(price_a.slice(0, -1));
-      price_b = parseInt(price_b.slice(0, -1));
-      return (price_a - price_b) * asc;
     }).detach().appendTo($(this));
   });
 }

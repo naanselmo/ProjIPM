@@ -7,7 +7,7 @@
       <div id="left" class="col-md-2 align-middle"></div>
       <div id="middle" class="col-md-8 align-middle">
         <div class="col-md-offset-2 col-md-4 text-center">
-          <a href="pedidos.php">
+          <a href="jukebox.php">
             <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
@@ -21,7 +21,7 @@
           </a>
         </div>
         <div class="col-md-4 text-center">
-          <a href="pedidos.php">
+          <a href="jogos.php">
             <div class="panel padded-large border-black semi-transparent-white rounded-corner">
               <br>
               <br>
@@ -56,7 +56,7 @@
     <script src="js/custom.js"></script>
     <script>
       set_help_dialog_element($('#help-dialog'));
-      set_header_text("Menu Inicial");
+      set_header_text("Entretenimento");
     </script>
   </body>
 </html>
