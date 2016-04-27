@@ -110,6 +110,9 @@
           <h2 id="name" class="text-white bordered-text-order">Outros</h2>
           <?php print_orders($others); ?>
         </div>
+        <div id="search-results" class="order-menu order-section hidden">
+          <h2 id="name" class="text-white bordered-text-order">Resultados da pesquisa</h2>
+        </div>
       </div>
 
       <div id="right" class="col-md-3">
