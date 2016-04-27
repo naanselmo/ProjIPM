@@ -1,13 +1,15 @@
 // Melhoria de Funcionalidade 2
 
--> Titulo no header de cada seccao
--> Texto maior nos pop-ups
--> Botão de pedir
+-> Search funcional - DONE
 -> Guardar pedido entre ecras - DONE
 -> Scrolls em pedidos e carrinhos - DONE
+-> Highlight no selecionado no menu pedidos - DONE
+-> Sorting - Funcoes feitas, preciso do html do nuno!
 -> Fazer medições - STARTED
--> Adicionar trademark
--> Highlight no selecionado no menu pedidos
+-> Texto maior nos pop-ups - Preciso mesmo?
+-> Adicionar trademark - Mehh o stor nao tem andado a reclamar, a nossa trademark é a nossa cor
+-> Titulo no header de cada seccao - Nuno formata me o header com um texto qualquer, para eu dps alterar esse texto entre paginas.
+-> Botão de pedir
 
 // Funcionalidade 3
 

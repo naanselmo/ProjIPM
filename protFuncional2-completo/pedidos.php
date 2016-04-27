@@ -37,7 +37,7 @@
 
   function print_orders($products){
     foreach ($products as $id => $details): ?>
-      <div class="col-md-3 text-center">
+      <div class="col-md-3 text-center order-item-wrapper">
         <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller order-item">
           <img class="img-responsive img-rounded" src="<?php echo("images/".$details[1])?>">
           <div class="order-text">
@@ -64,49 +64,49 @@
           <br>
           <div class="sidemenu-item" onClick="showMain()">
             <span class="fa fa-star fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 class="bold-text text-white bordered-text-small inline">Geral</h4></span>
+            <span><h4 id="main-option" class="text-white bordered-text-small inline active-option">Geral</h4></span>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showDrinks()">
             <span class="fa fa-beer fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 class="bold-text text-white bordered-text-small inline">Bebidas</h4></span>
+            <span><h4 id="drinks-option" class="text-white bordered-text-small inline">Bebidas</h4></span>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showFoods()">
             <span class="fa fa-cutlery fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 class="bold-text text-white bordered-text-small inline">Comidas</h4></span>
+            <span><h4 id="foods-option" class="text-white bordered-text-small inline">Comidas</h4></span>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showOthers()">
             <span class="fa fa-ellipsis-h fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 class="bold-text text-white bordered-text-small inline">Outros</h4></span>
+            <span><h4 id="others-option" class="text-white bordered-text-small inline">Outros</h4></span>
           </div>
         </div>
       </div>
 
       <div id="middle" class="col-md-7">
         <div id="main" class="order-menu">
-          <div class="col-md-12 no-padding">
+          <div class="col-md-12 no-padding order-section">
             <h2 id="name" class="text-white bordered-text-order">Recomendados</h2>
             <?php print_orders($highlights); ?>
           </div>
           <br>
           <br>
           <br>
-          <div class="col-md-12 no-padding">
+          <div class="col-md-12 no-padding order-section">
             <h2 id="name" class="text-white bordered-text-order">Mais pedidos</h2>
             <?php print_orders($top); ?>
           </div>
         </div>
-        <div id="drinks" class="order-menu hidden">
+        <div id="drinks" class="order-menu order-section hidden">
           <h2 id="name" class="text-white bordered-text-order">Bebidas</h2>
           <?php print_orders($drinks); ?>
         </div>
-        <div id="foods" class="order-menu hidden">
+        <div id="foods" class="order-menu order-section hidden">
           <h2 id="name" class="text-white bordered-text-order">Comidas</h2>
           <?php print_orders($foods); ?>
         </div>
-        <div id="others" class="order-menu hidden">
+        <div id="others" class="order-menu order-section hidden">
           <h2 id="name" class="text-white bordered-text-order">Outros</h2>
           <?php print_orders($others); ?>
         </div>

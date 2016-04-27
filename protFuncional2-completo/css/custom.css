@@ -282,6 +282,13 @@ a, a:hover {
   border-radius: 100px;
 }
 
+/* Selected option */
+.active-option{
+  /*text-decoration: underline;*/
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+}
+
 /* * * * * * * * * * * * *
 !!! INCLUDES SECTION! !!!
 * * * * * * * * * * * * */
