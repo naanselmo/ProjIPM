@@ -49,7 +49,7 @@
       </div>
     </div>
     <?php include("includes/popup.html");?>
-    <?php include("includes/footer-main.html");?>
+    <?php include("includes/footer-submenu.html");?>
     <?php include("includes/includes.html");?>
 
     <!-- Custom Script -->

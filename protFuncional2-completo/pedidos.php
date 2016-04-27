@@ -188,7 +188,7 @@
         </div>
         <br>
         <div class="panel padded-medium border-black semi-transparent-white rounded-corner text-center">
-            <h2 id="text" class="text-white bordered-text inline" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>&#xF00C Efectuar Pedido</h2>
+            <h2 id="text" class="text-white bordered-text inline" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome' onClick="clearOrders()">&#xF00C Efectuar Pedido</h2>
         </div>
 
       </div>
