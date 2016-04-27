@@ -128,7 +128,7 @@ header {
   text-align: center;
   border-bottom-style: solid;
   border-bottom-width: 4px;
-  border-bottom-color: rgba(0, 0, 0, 0.1);;
+  border-bottom-color: rgba(0, 0, 0, 0.15);;
 }
 
 footer {
@@ -139,7 +139,7 @@ footer {
   text-align: center;
   border-top-style: solid;
   border-top-width: 4px;
-  border-top-color: rgba(0, 0, 0, 0.1);;
+  border-top-color: rgba(0, 0, 0, 0.15);;
 }
 
 footer > div > a > .fa {
