@@ -113,7 +113,7 @@
       </div>
 
       <div id="right" class="col-md-3">
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2" style="position: relative; top: 20px;">
           <span class="fa fa-shopping-cart fa-3x fa-inverse bordered-text pull-left align-icon"></span>
           <span><h2 class="bold-text text-white bordered-text-small inline">Carrinho</h2></span>
         </div>
@@ -161,6 +161,7 @@
     <script src="js/pedidos.js"></script>
     <script>
       set_help_dialog_element($('#help-dialog'));
+      set_header_text("Pedidos");
     </script>
   </body>
 </html>

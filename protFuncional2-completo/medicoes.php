@@ -60,6 +60,7 @@
     <script src="js/alcoolemia.js"></script>
     <script>
       set_help_dialog_element($('#help-dialog'));
+      set_header_text("Medições");
     </script>
   </body>
 </html>

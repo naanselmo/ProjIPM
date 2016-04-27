@@ -73,6 +73,7 @@
     <script src="js/custom.js"></script>
     <script>
       set_help_dialog_element($('#help-dialog'));
+      set_header_text("Menu Inicial");
     </script>
   </body>
 </html>
