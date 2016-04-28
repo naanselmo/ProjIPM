@@ -83,7 +83,7 @@
       </div>
 
       <div id="middle" class="col-md-7">
-        <div id="main" class="games-menu">
+        <div id="main" class="game-menu">
           <div class="col-md-12 no-padding games-section">
             <h2 id="name" class="text-white bordered-text-games">Recomendados</h2>
             <?php print_games($highlights); ?>
@@ -96,17 +96,17 @@
             <?php print_games($top); ?>
           </div>
         </div>
-        <div id="singleplayer" class="games-menu games-section hidden">
+        <div id="singleplayer" class="game-menu games-section hidden">
           <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-games">Singleplayer</h2>
           <?php print_games($singleplayer); ?>
         </div>
-        <div id="multiplayer" class="games-menu games-section hidden">
+        <div id="multiplayer" class="game-menu games-section hidden">
           <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-games">Multiplayer</h2>
           <?php print_games($multiplayer); ?>
         </div>
-        <div id="search-results" class="games-menu games-section hidden">
+        <div id="search-results" class="game-menu games-section hidden">
           <h2 id="name" class="text-white bordered-text-games">Resultados da pesquisa</h2>
         </div>
       </div>

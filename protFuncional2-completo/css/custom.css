@@ -277,8 +277,7 @@ a, a:hover {
   display: none !important;
 }
 
-/* Order screen */
-.order-menu {
+.order-menu, .game-menu, .song-menu {
   position: relative;
   overflow-y: scroll;
   height: -o-calc(100vh - 215px); /* opera */

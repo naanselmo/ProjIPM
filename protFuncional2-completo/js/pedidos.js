@@ -16,6 +16,7 @@ $(document).ready(function () {
     // When it empties, clear the search no matter what
     if (this.value.length === 0) {
       search('');
+      hideSearchResults();
       return;
     }
     // If its not dynamic wait for user to press enter to make the search
@@ -61,7 +62,7 @@ function addOrder(id, name, price) {
   } else {
     var clone = $("#blank-order").clone();
     clone.attr("id", id);
-    if (name.length > 13) {
+    if (name.length >= 13) {
       clone.find("#name").text(name.substring(0, 10) + "...");
     } else {
       clone.find("#name").text(name);
@@ -166,7 +167,7 @@ function showFoods() {
     $("#others").addClass("hidden");
   }
 
-  // Hide search rsults.
+  // Hide search results.
   hideSearchResults();
 }
 

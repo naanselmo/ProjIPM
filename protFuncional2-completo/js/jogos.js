@@ -8,6 +8,7 @@ $(document).ready(function () {
     // When it empties, clear the search no matter what
     if (this.value.length === 0) {
       search('');
+      hideSearchResults();
       return;
     }
     // If its not dynamic wait for user to press enter to make the search
@@ -107,8 +108,8 @@ function showMultiplayer() {
  * Show the search results menu, and saves the last menu active for restore.
  */
 function showSearchResults() {
-  // Save the last games-menu not hidden.
-  lastActiveMenuBeforeSearch = $('.games-menu').not('.hidden');
+  // Save the last game-menu not hidden.
+  lastActiveMenuBeforeSearch = $('.game-menu').not('.hidden');
 
   // Hide it.
   lastActiveMenuBeforeSearch.addClass('hidden');

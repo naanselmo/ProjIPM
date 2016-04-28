@@ -12,6 +12,7 @@ $(document).ready(function () {
     // When it empties, clear the search no matter what
     if (this.value.length === 0) {
       search('');
+      hideSearchResults();
       return;
     }
     // If its not dynamic wait for user to press enter to make the search
@@ -52,12 +53,12 @@ function addSong(id, name, author) {
   } else {
     var clone = $("#blank-song").clone();
     clone.attr("id", id);
-    if (name.length > 18) {
+    if (name.length >= 18) {
       clone.find("#name").text(name.substring(0, 15) + "...");
     } else {
       clone.find("#name").text(name);
     }
-    if (author.length > 13) {
+    if (author.length >= 13) {
       clone.find("#author").text(author.substring(0, 10) + "...");
     } else {
       clone.find("#author").text(author);

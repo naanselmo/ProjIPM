@@ -143,7 +143,7 @@
       </div>
 
       <div id="right" class="col-md-3">
-        <div class="col-md-offset-1 col-md-10 col-md-offset-1" style="position: relative; top: 22px;">
+        <div class="col-md-offset-3 col-md-6 col-md-offset-3" style="position: relative; top: 22px;">
           <span class="fa fa-list-ol fa-3x fa-inverse bordered-text pull-left align-icon"></span>
           <span><h2 class="bold-text text-white bordered-text-small inline">Playlist</h2></span>
         </div>
