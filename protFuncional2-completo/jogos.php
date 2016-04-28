@@ -158,14 +158,14 @@
       </div>
 
       <div id="help-dialog" style="display: none;">
-        Este menu é dedicado à realização de pedidos e ao seu pagamento.
+        Este menu é dedicado ao lazer através de jogos.
         <br>
         <br>
-        Do lado esquerdo pode seleccionar qual a categoria que deseja visualizar, ou procurar por um dado produto.
+        Do lado esquerdo pode escolher uma das categorias, ou procurar por nome dos jogos.
         <br>
-        Pode carregar nos botões que aparecem, com cada produto, para o adicionar ao seu carrinho.
+        Pode carregar nos botões que aparecem, com cada jogo, para o jogar e ver as pontuações mais altas.
         <br>
-        Do lado direito pode alterar as quantidades pedidas de cada produto, ou efectuar pagamento.
+        Do lado direito pode visualizar quais os jogos atualmente abertos.
       </div>
     </div>
     <?php include("includes/popup.html");?>

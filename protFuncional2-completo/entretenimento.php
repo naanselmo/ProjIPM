@@ -39,13 +39,10 @@
       <div id="help-dialog" style="display: none;">
         Neste menu pode escolher uma das seguintes opções:
         <ul>
-          <li>O botão de "Pedidos" é para efetuar pedidos e pagamentos.</li>
-          <li>O botão de "Entretenimento" é para jogar jogos ou escolher a música ambiente do bar.</li>
-          <li>O botão de "Teste de Alcoolemia" é para efetuar um teste de alcoolemia.</li>
+          <li>O botão de "Jukebox" escolher a música ambiente do bar.</li>
+          <li>O botão de "Jogos" é para jogar qualquer jogo disponivel na nossa biblioteca.</li>
         </ul>
         Para chamar um empregado carregue no botão da pessoa à esquerda do botão de ajuda.
-        <br>
-        Para aceder às definições da mesa carregue na engrenagem no canto inferior esquerdo.
       </div>
     </div>
     <?php include("includes/popup.html");?>
