@@ -1,12 +1,16 @@
 <?php
   $singleplayer = array(
-    "bubbles" => array("Bubbles", "hamburger.png", "bubbles.php"),
-    "flappy_bird" => array("Flappy Bird", "hamburger.png")
+    "bubbles" => array("Bubbles", "ghost.png"),
+    "flappy_bird" => array("Flappy Bird", "ghost.png"),
+    "pacman" => array("Pacman", "ghost.png"),
+    "space_invaders" => array("Space Invaders", "ghost.png")
   );
 
   $multiplayer = array(
-    "pong" => array("Pong", "hamburger.png", "pong.php"),
-    "battle_tetris" => array("Battle Tetris", "hamburger.png")
+    "pong" => array("Pong", "ghost.png"),
+    "battle_tetris" => array("Battle Tetris", "ghost.png"),
+    "chess" => array("Chess", "ghost.png"),
+    "checkers" => array("Checkers", "ghost.png")
   );
 
   function get_random($source, $amount){
@@ -26,13 +30,13 @@
 
   $all = array_merge($singleplayer, $multiplayer);
 
-  function print_games($products){
-    foreach ($products as $id => $details): ?>
-      <div class="col-md-3 text-center order-item-wrapper">
-        <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller order-item" onClick="window.location.href='jogo.php?game=<?php echo($id) ?>&title=<?php echo($details[0]) ?>'">
-          <img class="img-responsive img-rounded" src="<?php echo("images/".$details[1])?>">
-          <div class="order-text">
-            <h3 id="name" class="text-white bordered-text-order"><?php echo($details[0]) ?></h3>
+  function print_games($games){
+    foreach ($games as $id => $details): ?>
+      <div class="col-md-3 text-center game-item-wrapper">
+        <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller game-item" onClick="window.location.href='jogo.php?game=<?php echo($id) ?>&title=<?php echo($details[0]) ?>'">
+          <img class="img-responsive img-rounded rounded-corner-smaller" src="<?php echo("images/".$details[1])?>">
+          <div class="game-text">
+            <h3 id="name" class="text-white bordered-text-game"><?php echo($details[0]) ?></h3>
           </div>
         </div>
       </div>
@@ -43,8 +47,8 @@
     <div class="sort-button" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>
       <select class="selectpicker sort-select">
         <option selected disabled hidden value="none;0">Ordenar por…</option>
-        <option value="name;1">&#xF15E Alfabeticamente [A-Z]</option>
-        <option value="name;-1">&#xF15D Alfabeticamente [Z-A]</option>
+        <option value="name;1">&#xF15D Alfabeticamente [A-Z]</option>
+        <option value="name;-1">&#xF15E Alfabeticamente [Z-A]</option>
       </select>
     </div>
   <?php } ?>
@@ -79,31 +83,31 @@
       </div>
 
       <div id="middle" class="col-md-7">
-        <div id="main" class="order-menu">
-          <div class="col-md-12 no-padding order-section">
-            <h2 id="name" class="text-white bordered-text-order">Recomendados</h2>
+        <div id="main" class="games-menu">
+          <div class="col-md-12 no-padding games-section">
+            <h2 id="name" class="text-white bordered-text-games">Recomendados</h2>
             <?php print_games($highlights); ?>
           </div>
           <br>
           <br>
           <br>
-          <div class="col-md-12 no-padding order-section">
-            <h2 id="name" class="text-white bordered-text-order">Mais populares</h2>
+          <div class="col-md-12 no-padding games-section">
+            <h2 id="name" class="text-white bordered-text-games">Mais populares</h2>
             <?php print_games($top); ?>
           </div>
         </div>
-        <div id="multiplayer" class="order-menu order-section hidden">
+        <div id="singleplayer" class="games-menu games-section hidden">
           <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-order">Bebidas</h2>
-          <?php print_games($multiplayer); ?>
-        </div>
-        <div id="singleplayer" class="order-menu order-section hidden">
-          <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-order">Comidas</h2>
+          <h2 id="name" class="text-white bordered-text-games">Singleplayer</h2>
           <?php print_games($singleplayer); ?>
         </div>
-        <div id="search-results" class="order-menu order-section hidden">
-          <h2 id="name" class="text-white bordered-text-order">Resultados da pesquisa</h2>
+        <div id="multiplayer" class="games-menu games-section hidden">
+          <?php print_sort_button(); ?>
+          <h2 id="name" class="text-white bordered-text-games">Multiplayer</h2>
+          <?php print_games($multiplayer); ?>
+        </div>
+        <div id="search-results" class="games-menu games-section hidden">
+          <h2 id="name" class="text-white bordered-text-games">Resultados da pesquisa</h2>
         </div>
       </div>
 
@@ -117,20 +121,36 @@
         <br>
         <br>
         <div id="open-games" class="games">
-          <div id="blank-game" class="col-md-12 order">
+          <div id="blank-game" class="col-md-12 open-game">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-5 text-center">
-                <h4 id="name" class="text-white bordered-text inline">Blank test order!</h4>
+              <div class="col-md-8 text-center">
+                <h4 id="game-title" class="text-white bordered-text inline">Empty Open Game</h4>
               </div>
-              <div class="col-md-7">
-                <div class="col-md-3 text-center">
-                  <h4 id="price" class="text-white bordered-text inline">10€</h4>
-                </div>
-                <div class="col-md-9 text-center">
-                  <span class="fa fa-minus-circle fa-2x fa-inverse bordered-text pull-left align-icon cart-remove"></span>
-                  <span><h4 id="count" class="text-white bordered-text inline">1</h4></span>
-                  <span class="fa fa-plus-circle fa-2x fa-inverse bordered-text pull-right align-icon cart-add"></span>
-                </div>
+              <div class="col-md-4">
+                <span class="fa fa-sign-in fa-2x fa-inverse bordered-text pull-left align-icon enter-game"></span>
+                <span class="fa fa-eye fa-2x fa-inverse bordered-text pull-right align-icon spectate-game"></span>
+              </div>
+            </div>
+          </div>
+          <div id="pong#2984375" class="col-md-12 open-game">
+            <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
+              <div class="col-md-8 text-center">
+                <h4 id="game-title" class="text-white bordered-text inline">Pong #2984375</h4>
+              </div>
+              <div class="col-md-4">
+                <span class="fa fa-sign-in fa-2x fa-inverse bordered-text pull-left align-icon enter-game" onClick="window.location.href='jogo.php?game=game=pong&title=Pong&match=2984375&action=join'"></span>
+                <span class="fa fa-eye fa-2x fa-inverse bordered-text pull-right align-icon spectate-game" onClick="window.location.href='jogo.php?game=game=pong&title=Pong&match=2984375&action=spectate'"></span>
+              </div>
+            </div>
+          </div>
+          <div id="battle_tetris#347631" class="col-md-12 open-game">
+            <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
+              <div class="col-md-8 text-center">
+                <h4 id="game-title" class="text-white bordered-text inline">Battle Tetris #347631</h4>
+              </div>
+              <div class="col-md-4">
+                <span class="fa fa-sign-in fa-2x fa-inverse bordered-text pull-left align-icon enter-game" onClick="window.location.href='jogo.php?game=battle_tetris&title=Battle Tetris&match=347631&action=join'"></span>
+                <span class="fa fa-eye fa-2x fa-inverse bordered-text pull-right align-icon spectate-game" onClick="window.location.href='jogo.php?game=battle_tetris&title=Battle Tetris&match=347631&action=spectate'"></span>
               </div>
             </div>
           </div>

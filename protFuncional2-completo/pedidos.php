@@ -68,7 +68,7 @@
     foreach ($products as $id => $details): ?>
       <div class="col-md-3 text-center order-item-wrapper">
         <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller order-item">
-          <img class="img-responsive img-rounded" src="<?php echo("images/".$details[1])?>">
+          <img class="img-responsive img-rounded rounded-corner-smaller" src="<?php echo("images/".$details[1])?>">
           <div class="order-text">
             <h3 id="name" class="text-white bordered-text-order"><?php echo($details[0]) ?></h3>
             <h4 id="price" class="text-white bordered-text-order"><?php echo($details[2]) ?></h4>
@@ -84,8 +84,8 @@
         <option selected disabled hidden value="none;0">Ordenar por…</option>
         <option value="price;1">&#xF162 Menor preço primeiro</option>
         <option value="price;-1">&#xF163 Maior preço primeiro</option>
-        <option value="name;1">&#xF15E Alfabeticamente [A-Z]</option>
-        <option value="name;-1">&#xF15D Alfabeticamente [Z-A]</option>
+        <option value="name;1">&#xF15D Alfabeticamente [A-Z]</option>
+        <option value="name;-1">&#xF15E Alfabeticamente [Z-A]</option>
       </select>
     </div>
   <?php } ?>

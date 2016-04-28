@@ -19,7 +19,7 @@ $(document).ready(function () {
       return;
     }
     // If its not dynamic wait for user to press enter to make the search
-    if (dynamic || handler.keyCode == 13)
+    else if (dynamic || handler.keyCode == 13)
       search(this.value);
   });
 

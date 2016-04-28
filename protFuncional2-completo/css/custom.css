@@ -41,7 +41,7 @@
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-.bordered-text-order {
+.bordered-text-order, .bordered-text-game, .bordered-text-song {
 	text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
 }
 
@@ -87,6 +87,12 @@
 .align-middleish {
   position: relative;
   top: 25%;
+  transform: translateY(-50%);
+}
+
+.align-middleisher {
+  position: relative;
+  top: 35%;
   transform: translateY(-50%);
 }
 
@@ -216,12 +222,20 @@ a, a:hover {
   border-radius: 25px;
 }
 
-.order-text {
+.order-text, .game-text {
   position: absolute;
   z-index: 1;
   left: 0;
   right: 0;
   top: 50px;
+}
+
+.song-text {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 35px;
 }
 
 #search {
@@ -259,7 +273,7 @@ a, a:hover {
   padding: 0 !important;
 }
 
-#blank-order, #blank-game, #blank-highscore {
+#blank-order, #blank-game, #blank-highscore, #blank-song {
   display: none !important;
 }
 
@@ -284,9 +298,9 @@ a, a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.15);
 }
 
-.games, .highscores {
+.games, .highscores, .playlist {
   overflow-y: scroll;
-  height: 500px;
+  height: 510px;
   padding-top: 10px;
   border-top-style: solid;
   border-top-width: 4px;

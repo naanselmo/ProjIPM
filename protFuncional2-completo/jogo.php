@@ -34,28 +34,28 @@
         <br>
         <br>
         <div id="highscores" class="highscores">
-          <div id="blank-highscore" class="col-md-12 order">
+          <div id="blank-highscore" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
                 <h4 id="highscore-text" class="text-white bordered-text inline">Nuno Anselmo - 100000</h4>
               </div>
             </div>
           </div>
-          <div id="nuno-anselmo" class="col-md-12 order">
+          <div id="nuno-anselmo" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
                 <h4 id="highscore-text" class="text-white bordered-text inline">Nuno Anselmo - 100000</h4>
               </div>
             </div>
           </div>
-          <div id="andre-mendes" class="col-md-12 order">
+          <div id="andre-mendes" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
                 <h4 id="highscore-text" class="text-white bordered-text inline">André Mendes - 99999</h4>
               </div>
             </div>
           </div>
-          <div id="guilherme-serpa" class="col-md-12 order">
+          <div id="guilherme-serpa" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
                 <h4 id="highscore-text" class="text-white bordered-text inline">Guilherme Serpa - 1</h4>

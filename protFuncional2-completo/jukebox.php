@@ -1,50 +1,30 @@
 <?php
-  $foods = array(
-    "hamburger" => array("Hamburger", "hamburger.png", "12€"),
-    "steak" => array("Steak", "hamburger.png", "7€"),
-    "pizza" => array("Pizza", "hamburger.png", "9€"),
-    "chips" => array("Chips", "hamburger.png", "9€"),
-    "nachos" => array("Nachos", "hamburger.png", "9€"),
-    "mozzarella_sticks" => array("Mozzarella Sticks", "hamburger.png", "9€"),
-    "onion_rings" => array("Onion Rings", "hamburger.png", "9€"),
-    "chicken_wings" => array("Chicken Wings", "hamburger.png", "9€"),
-    "grilled_cheese_sandwich" => array("Grilled Cheese Sandwich", "hamburger.png", "9€"),
-    "calamari" => array("Calamari", "hamburger.png", "9€"),
-    "empty_plate" => array("Empty Plate", "hamburger.png", "99€")
+  $classic = array(
+    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
+    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
+    "song3" => array("song3", "Dark_Side_of_the_Moon.png", "author3", "2010"),
+    "song4" => array("song4", "Dark_Side_of_the_Moon.png", "author4", "2007")
   );
 
-  $drinks = array(
-    "beer" => array("Beer", "hamburger.png", "19€"),
-    "gin" => array("Gin", "hamburger.png", "21€"),
-    "tequila" => array("Tequila", "hamburger.png", "15€"),
-    "vodka" => array("Vodka", "hamburger.png", "6€"),
-    "rum" => array("Rum", "hamburger.png", "17€"),
-    "absinthe" => array("Absinthe", "hamburger.png", "21€"),
-    "whisky" => array("Whisky", "hamburger.png", "21€"),
-    "armagnac" => array("Armagnac", "hamburger.png", "21€"),
-    "cognac" => array("Cognac", "hamburger.png", "21€"),
-    "champagne" => array("Champagne", "hamburger.png", "21€"),
-    "apple_cider" => array("Apple Cider", "hamburger.png", "21€"),
-    "sake" => array("Sake", "hamburger.png", "21€"),
-    "manhattan" => array("Manhattan", "hamburger.png", "21€"),
-    "bourbon" => array("Bourbon", "hamburger.png", "21€"),
-    "martini" => array("Martini", "hamburger.png", "21€"),
-    "tom_collins" => array("Tom Collins", "hamburger.png", "21€"),
-    "daiquiri" => array("Daiquiri", "hamburger.png", "21€"),
-    "mojito" => array("Mojito", "hamburger.png", "21€"),
-    "pina_colada" => array("Piña Colada", "hamburger.png", "21€"),
-    "bloody_mary" => array("Bloody Mary", "hamburger.png", "21€"),
-    "appletini" => array("Appletini", "hamburger.png", "21€"),
-    "cosmopolitan" => array("Cosmopolitan", "hamburger.png", "21€"),
-    "sex_on_the_beach" => array("Sex on the Beach", "hamburger.png", "21€"),
-    "margarita" => array("Margarita", "hamburger.png", "21€"),
-    "red_wine" => array("Red Wine", "hamburger.png", "21€"),
-    "white_wine" => array("White Wine", "hamburger.png", "8€"),
-    "empty_cup" => array("Empty Cup", "hamburger.png", "99€")
+  $rock = array(
+    "song5" => array("song5", "Dark_Side_of_the_Moon.png", "author1", "2006"),
+    "song6" => array("song6", "Dark_Side_of_the_Moon.png", "author2", "2010"),
+    "song7" => array("song7", "Dark_Side_of_the_Moon.png", "author3", "2015"),
+    "song8" => array("song8", "Dark_Side_of_the_Moon.png", "author4", "2010")
   );
 
-  $others = array(
-    "box" => array("Box", "hamburger.png", "0.01€")
+  $punk = array(
+    "song9" => array("song9", "Dark_Side_of_the_Moon.png", "author1", "2003"),
+    "song10" => array("song10", "Dark_Side_of_the_Moon.png", "author2", "2011"),
+    "song11" => array("song11", "Dark_Side_of_the_Moon.png", "author3", "2010"),
+    "song12" => array("song12", "Dark_Side_of_the_Moon.png", "author4", "2003")
+  );
+
+  $pop = array(
+    "song13" => array("song13", "Dark_Side_of_the_Moon.png", "author", "2013"),
+    "song14" => array("song14", "Dark_Side_of_the_Moon.png", "author", "2005"),
+    "song15" => array("song15", "Dark_Side_of_the_Moon.png", "author", "2006"),
+    "song16" => array("song16", "Dark_Side_of_the_Moon.png", "author", "2005")
   );
 
   function get_random($source, $amount){
@@ -54,24 +34,23 @@
     return $random;
   }
 
-  $highlights_foods = get_random($foods, 2);
-  $highlights_drinks = get_random($drinks, 2);
-  $highlights = array_merge($highlights_foods, $highlights_drinks);
+  $top_classic = get_random($classic, 2);
+  $top_rock = get_random($rock, 2);
+  $top_punk = get_random($punk, 2);
+  $top_pop = get_random($pop, 2);
+  $top = array_merge($top_classic, $top_rock, $top_punk, $top_pop);
 
-  $top_foods = get_random($foods, 2);
-  $top_drinks = get_random($drinks, 2);
-  $top = array_merge($top_foods, $top_drinks);
+  $all = array_merge($classic, $rock, $punk, $pop);
 
-  $all = array_merge($foods, $drinks);
-
-  function print_orders($products){
-    foreach ($products as $id => $details): ?>
-      <div class="col-md-3 text-center order-item-wrapper">
-        <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller order-item">
-          <img class="img-responsive img-rounded" src="<?php echo("images/".$details[1])?>">
-          <div class="order-text">
-            <h3 id="name" class="text-white bordered-text-order"><?php echo($details[0]) ?></h3>
-            <h4 id="price" class="text-white bordered-text-order"><?php echo($details[2]) ?></h4>
+  function print_songs($songs){
+    foreach ($songs as $id => $details): ?>
+      <div class="col-md-3 text-center song-item-wrapper">
+        <div id="<?php echo($id) ?>" class="panel padded-small border-black semi-transparent-white rounded-corner-smaller song-item">
+          <img class="img-responsive img-rounded rounded-corner-smaller" src="<?php echo("images/".$details[1])?>">
+          <div class="song-text">
+            <h3 id="name" class="text-white bordered-text-song"><?php echo($details[0]) ?></h3>
+            <h4 id="author" class="text-white bordered-text-song"><?php echo($details[2]) ?></h4>
+            <h4 id="date" class="text-white bordered-text-song"><?php echo($details[3]) ?></h4>
           </div>
         </div>
       </div>
@@ -82,10 +61,12 @@
     <div class="sort-button" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'>
       <select class="selectpicker sort-select">
         <option selected disabled hidden value="none;0">Ordenar por…</option>
-        <option value="price;1">&#xF162 Menor preço primeiro</option>
-        <option value="price;-1">&#xF163 Maior preço primeiro</option>
-        <option value="name;1">&#xF15E Alfabeticamente [A-Z]</option>
-        <option value="name;-1">&#xF15D Alfabeticamente [Z-A]</option>
+        <option value="name;1">&#xF15D Nome [A-Z]</option>
+        <option value="name;-1">&#xF15E Nome [Z-A]</option>
+        <option value="author;1">&#xF15D Autor [A-Z]</option>
+        <option value="author;-1">&#xF15E Autor [Z-A]</option>
+        <option value="date;-1">&#xF162 Mais recente primeiro</option>
+        <option value="date;1">&#xF163 Mais antigo primeiro</option>
       </select>
     </div>
   <?php } ?>
@@ -96,8 +77,8 @@
   <body>
     <?php include("includes/header.html");?>
     <div id="wrapper" class="center-wrapper container-fluid">
-      <div id="left" class="col-md-2 align-middleish">
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+      <div id="left" class="col-md-2 align-middleisher">
+        <div class="col-md-offset-1 col-md-10 col-md-offset-1">
           <div class="sidemenu-item">
             <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'/>
           </div>
@@ -107,90 +88,80 @@
             <span><h4 id="main-option" class="text-white bordered-text-small inline active-option">Geral</h4></span>
           </div>
           <br>
-          <div class="sidemenu-item" onClick="showDrinks()">
-            <span class="fa fa-beer fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 id="drinks-option" class="text-white bordered-text-small inline">Bebidas</h4></span>
+          <div class="sidemenu-item" onClick="showClassic()">
+            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
+            <span><h4 id="classic-option" class="text-white bordered-text-small inline">Clássica</h4></span>
           </div>
           <br>
-          <div class="sidemenu-item" onClick="showFoods()">
-            <span class="fa fa-cutlery fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 id="foods-option" class="text-white bordered-text-small inline">Comidas</h4></span>
+          <div class="sidemenu-item" onClick="showRock()">
+            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
+            <span><h4 id="rock-option" class="text-white bordered-text-small inline">Rock</h4></span>
           </div>
           <br>
-          <div class="sidemenu-item" onClick="showOthers()">
-            <span class="fa fa-ellipsis-h fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 id="others-option" class="text-white bordered-text-small inline">Outros</h4></span>
+          <div class="sidemenu-item" onClick="showPunk()">
+            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
+            <span><h4 id="punk-option" class="text-white bordered-text-small inline">Punk</h4></span>
+          </div>
+          <br>
+          <div class="sidemenu-item" onClick="showPop()">
+            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
+            <span><h4 id="pop-option" class="text-white bordered-text-small inline">Pop</h4></span>
           </div>
         </div>
       </div>
 
       <div id="middle" class="col-md-7">
-        <div id="main" class="order-menu">
-          <div class="col-md-12 no-padding order-section">
-            <h2 id="name" class="text-white bordered-text-order">Recomendados</h2>
-            <?php print_orders($highlights); ?>
-          </div>
-          <br>
-          <br>
-          <br>
-          <div class="col-md-12 no-padding order-section">
-            <h2 id="name" class="text-white bordered-text-order">Mais populares</h2>
-            <?php print_orders($top); ?>
+        <div id="main" class="song-menu">
+          <div class="col-md-12 no-padding song-section">
+            <h2 id="name" class="text-white bordered-text-song">Mais populares</h2>
+            <?php print_songs($top); ?>
           </div>
         </div>
-        <div id="drinks" class="order-menu order-section hidden">
+        <div id="classic" class="song-menu song-section hidden">
           <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-order">Bebidas</h2>
-          <?php print_orders($drinks); ?>
+          <h2 id="name" class="text-white bordered-text-song">Clássica</h2>
+          <?php print_songs($classic); ?>
         </div>
-        <div id="foods" class="order-menu order-section hidden">
+        <div id="rock" class="song-menu song-section hidden">
           <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-order">Comidas</h2>
-          <?php print_orders($foods); ?>
+          <h2 id="name" class="text-white bordered-text-song">Rock</h2>
+          <?php print_songs($rock); ?>
         </div>
-        <div id="others" class="order-menu order-section hidden">
+        <div id="punk" class="song-menu song-section hidden">
           <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-order">Outros</h2>
-          <?php print_orders($others); ?>
+          <h2 id="name" class="text-white bordered-text-song">Punk</h2>
+          <?php print_songs($punk); ?>
         </div>
-        <div id="search-results" class="order-menu order-section hidden">
-          <h2 id="name" class="text-white bordered-text-order">Resultados da pesquisa</h2>
+        <div id="pop" class="song-menu song-section hidden">
+          <?php print_sort_button(); ?>
+          <h2 id="name" class="text-white bordered-text-song">Pop</h2>
+          <?php print_songs($pop); ?>
+        </div>
+        <div id="search-results" class="song-menu song-section hidden">
+          <h2 id="name" class="text-white bordered-text-song">Resultados da pesquisa</h2>
         </div>
       </div>
 
       <div id="right" class="col-md-3">
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2" style="position: relative; top: 22px;">
-          <span class="fa fa-shopping-cart fa-3x fa-inverse bordered-text pull-left align-icon"></span>
-          <span><h2 class="bold-text text-white bordered-text-small inline">Carrinho</h2></span>
+        <div class="col-md-offset-1 col-md-10 col-md-offset-1" style="position: relative; top: 22px;">
+          <span class="fa fa-list-ol fa-3x fa-inverse bordered-text pull-left align-icon"></span>
+          <span><h2 class="bold-text text-white bordered-text-small inline">Playlist</h2></span>
         </div>
         <br>
         <br>
         <br>
         <br>
-        <div id="orders" class="orders">
-          <div id="blank-order" class="col-md-12 order">
+        <div id="playlist" class="playlist">
+          <div id="blank-song" class="col-md-12 playlist-item">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-5 text-center">
-                <h4 id="name" class="text-white bordered-text inline">Blank test order!</h4>
-              </div>
-              <div class="col-md-7">
-                <div class="col-md-3 text-center">
-                  <h4 id="price" class="text-white bordered-text inline">10€</h4>
-                </div>
-                <div class="col-md-9 text-center">
-                  <span class="fa fa-minus-circle fa-2x fa-inverse bordered-text pull-left align-icon cart-remove"></span>
-                  <span><h4 id="count" class="text-white bordered-text inline">1</h4></span>
-                  <span class="fa fa-plus-circle fa-2x fa-inverse bordered-text pull-right align-icon cart-add"></span>
-                </div>
+              <div class="col-md-12 text-center">
+                <h4 id="name" class="text-white bordered-text inline">Blank Name</h4>
+                <h4 class="text-white bordered-text inline"> - </h4>
+                <h4 id="author" class="text-white bordered-text inline">Blank Author</h4>
               </div>
             </div>
           </div>
         </div>
-        <br>
-        <div class="panel padded-medium border-black semi-transparent-white rounded-corner text-center">
-            <h2 id="text" class="text-white bordered-text inline" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome' onClick="clearOrders()">&#xF00C Efectuar Pedido</h2>
-        </div>
-
       </div>
 
       <div id="help-dialog" style="display: none;">
