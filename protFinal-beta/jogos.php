@@ -1,16 +1,16 @@
 <?php
   $singleplayer = array(
-    "bubbles" => array("Bubbles", "ghost.png"),
-    "flappy_bird" => array("Flappy Bird", "ghost.png"),
-    "pacman" => array("Pacman", "ghost.png"),
-    "space_invaders" => array("Space Invaders", "ghost.png")
+    "bubbles" => array("Bubbles", "games/bubbles.png"),
+    "flappy_bird" => array("Flappy Bird", "games/flappy_bird.png"),
+    "pacman" => array("Pacman", "games/pacman.png"),
+    "space_invaders" => array("Space Invaders", "games/space_invaders.png")
   );
 
   $multiplayer = array(
-    "pong" => array("Pong", "ghost.png"),
-    "battle_tetris" => array("Battle Tetris", "ghost.png"),
-    "chess" => array("Chess", "ghost.png"),
-    "checkers" => array("Checkers", "ghost.png")
+    "pong" => array("Pong", "games/pong.png"),
+    "battle_tetris" => array("Battle Tetris", "games/battle_tetris.png"),
+    "chess" => array("Chess", "games/chess.png"),
+    "checkers" => array("Checkers", "games/checkers.png")
   );
 
   function get_random($source, $amount){
