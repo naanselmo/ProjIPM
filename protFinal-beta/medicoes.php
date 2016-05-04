@@ -7,8 +7,8 @@
       <div id="left" class="col-md-1 align-middle"></div>
       <div id="middle" class="col-md-10 align-middle">
         <div class="col-md-6 text-center" style="position: relative; top: 10px;">
-          <div class="panel padded-large border-black semi-transparent-white rounded-corner">
-            <h1 class="bold-text text-white bordered-text" onclick="updateAlcoholLevel()">Teste de Alcoolemia</h1>
+          <div class="panel padded-large border-black semi-transparent-white rounded-corner" onclick="updateAlcoholLevel()">
+            <h1 class="bold-text text-white bordered-text">Teste de Alcoolemia</h1>
             <div class="panel-body">
               <div class="col-md-2"></div>
               <div class="col-md-8">
@@ -23,17 +23,18 @@
           </div>
         </div>
         <div class="col-md-6 text-center" style="position: relative; top: 13px;">
-          <div class="panel padded-large border-black semi-transparent-white rounded-corner">
-            <h1 class="bold-text text-white bordered-text" onclick="updateHeartrate()">Batimentos Cardíacos</h1>
+          <div class="panel padded-large border-black semi-transparent-white rounded-corner" onclick="updateHeartrate()">
+            <h1 class="bold-text text-white bordered-text">Batimentos Cardíacos</h1>
             <div class="panel-body">
-              <div class="col-md-2"></div>
-              <div class="col-md-8">
-                <div id="heartrate-gauge" style="height:294px; width:294px;" class="center-block"></div>
-                <h3 id="heartrate" style="position:relative; top:-90px;">0 BPM</h3>
+              <div class="col-md-12">
+                <div id="heartrate-gauge" style="height:294px; font-size:70px;" class="center-block">
+                  <span class="fa fa-heart fa-5x fa-inverse bordered-text"></span>
+                </div>
+                <h2 id="heartrate" style="position:relative; top:-225px;" class="bordered-text text-white">0 BPM</h2>
               </div>
-              <div class="col-md-2"></div>
               <div class="col-md-12">
                 <h4 class="text-white bordered-text" id="heartrate-description">Por favor coloque o polegar sobre o ícone!</h4>
+                <img style="position:absolute; bottom:150px; left:220px; height:100px" src="images/fingerprint.png">
               </div>
             </div>
           </div>
@@ -57,7 +58,7 @@
     <?php include("includes/includes.html");?>
 
     <!-- Custom Script -->
-    <script src="js/alcoolemia.js"></script>
+    <script src="js/medicoes.js"></script>
     <script>
       set_help_dialog_element($('#help-dialog'));
       set_header_text("Medições");
