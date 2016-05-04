@@ -5,6 +5,9 @@ $(document).ready(function () {
     addPlaylist($(this).attr("id") + "-song", $(this).find("#name").text(), $(this).find("#author").text());
   });
 
+  // Load last saved playlist
+  loadPlaylist();
+
   // Key up event for search bar
   // If dynamic it's true it will search while typing, otherwise it will search on enter.
   dynamic = true;
@@ -106,6 +109,8 @@ function addPlaylist(id, name, author) {
       thumbsUp($(this).parents(".playlist-item").attr("id"));
     }
   }
+  sortPlaylistByVotesAscendant();
+  savePlaylist();
 }
 
 function addScore(id, name, author) {
@@ -128,6 +133,8 @@ function addScore(id, name, author) {
     }
     clone.appendTo("#playlist");
   }
+  sortPlaylistByVotesAscendant();
+  savePlaylist();
 }
 
 function removeScore(id) {
@@ -138,6 +145,8 @@ function removeScore(id) {
   } else {
     $(selector).remove();
   }
+  sortPlaylistByVotesAscendant();
+  savePlaylist();
 }
 
 function showMain() {
@@ -412,3 +421,36 @@ function sortByDate(song_menu_id, asc) {
     }).detach().appendTo($(this));
   });
 }
+
+/**
+ * Sorts the playlist by votes, in ascendant way.
+ */
+function sortPlaylistByVotesAscendant(){
+  var playlist = $('.playlist');
+  playlist.children('.playlist-item').sort(function (a, b) {
+    var name_a = $(a).find('#score').text();
+    var name_b = $(b).find('#score').text();
+    return name_a.localeCompare(name_b) * -1;
+  }).detach().appendTo(playlist);
+}
+
+/**
+ * Saves the playlist to the local storage.
+ */
+function savePlaylist() {
+  localStorage.setItem('playlist_state', $('#playlist').html());
+}
+
+/**
+ * Loads the playlist from the local storage.
+ */
+function loadPlaylist() {
+  var loaded_html = localStorage.getItem('playlist_state');
+  // Check if loaded order list exists and has blank-order id somewhere
+  if (loaded_html !== null && loaded_html.indexOf('blank-song') > -1) {
+    $('#playlist').html(loaded_html);
+  } else {
+    console.log('Invalid list loaded. Resetting...');
+  }
+}
+

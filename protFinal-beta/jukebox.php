@@ -1,9 +1,9 @@
 <?php
   $classic = array(
-    "song1" => array("song1", "music/Dark_Side_of_the_Moon.png", "author1", "2015"),
-    "song2" => array("song2", "music/Dark_Side_of_the_Moon.png", "author2", "2015"),
-    "song3" => array("song3", "music/Dark_Side_of_the_Moon.png", "author3", "2010"),
-    "song4" => array("song4", "music/Dark_Side_of_the_Moon.png", "author4", "2007")
+    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
+    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
+    "song3" => array("song3", "Dark_Side_of_the_Moon.png", "author3", "2010"),
+    "song4" => array("song4", "Dark_Side_of_the_Moon.png", "author4", "2007")
   );
 
   $rock = array(
@@ -112,6 +112,7 @@
 
       <div id="middle" class="col-md-7">
         <div id="main" class="song-menu">
+          <?php print_sort_button(); ?>
           <div class="col-md-12 no-padding song-section">
             <h2 id="name" class="text-white bordered-text-song">Mais populares</h2>
             <?php print_songs($top); ?>

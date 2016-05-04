@@ -1,13 +1,14 @@
 ﻿// Melhoria de Funcionalidade 3
 
--> Sort por votos
+-> Sort por votos - DONE
 -> Adicionar sort ao geral/recomendado (unico botao, sort ambos recomendados e top) - DONE
 -> Votos predefinidos/gerados automaticamente na Jukebox
 
 
 // Integração
 
--> Settings
--> Traduções
+-> Settings - Tirar o botao xD
+-> Traduções - Done
 -> Medições
--> Imagens
+-> Imagens - DONE
+-> Arranjar overflows de texto
