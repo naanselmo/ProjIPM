@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 function updateAlcoholLevel() {
 	var level = measureAlcoholLevel();
-	setTimeout(setAlcoholLevel, 1000, level);
+	setTimeout(setAlcoholLevel, 2000, level);
 }
 
 function measureAlcoholLevel() {
@@ -47,4 +47,46 @@ function setAlcoholLevel(level) {
 	} else {
 		$('#alcohol-level-description').text("Excede o limite legal para crime! (0.12)");
 	}
+}
+
+function updateHeartrate() {
+	$("#heartrate").text("A medir...");
+	var heartrate = measureHeartrate();
+	var iterations = Math.ceil(5*heartrate/60);
+	for (var i = 0; i < iterations; i++) {
+		setTimeout(pulseAnimation,i*(60000/Math.min(heartrate, 150)), "#heartrate-gauge");
+	}
+	setTimeout(setHeartrate, iterations*(60000/Math.min(heartrate, 150)), Math.min(heartrate, 150));
+}
+
+function measureHeartrate() {
+	return Number(Number(Math.random()*90 + 60).toFixed(0));
+}
+
+function setHeartrate(heartrate) {
+	$("#heartrate").text(heartrate + " BPM");
+
+	if (heartrate < 80){
+		$('#heartrate-description').text("Ritmo cardíaco estável, estado de repouso.");
+	} else if (heartrate < 100) {
+		$('#heartrate-description').text("Ritmo cardíaco ligeiramente acelerado, mas ainda normal.");
+	} else if (heartrate < 120) {
+		$('#heartrate-description').text("Ritmo cardíaco acelerado.");
+	} else if (heartrate < 140) {
+		$('#heartrate-description').text("Ritmo cardíaco demasiado acelerado para situação de repouso.");
+	} else {
+		$('#heartrate-description').text("Ritmo cardíaco perigosamente acelerado para situação de repouso.");
+	}
+}
+
+function pulseAnimation(selector) {
+  $(selector).animate({
+    'font-size': '60px',
+		'padding-top': '25px'
+  }, 200, 'swing', function() {
+    $(selector).animate({
+      'font-size': '70px',
+			'padding-top': '0px'
+    }, 200);
+  });
 }
