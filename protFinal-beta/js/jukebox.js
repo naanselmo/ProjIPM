@@ -103,10 +103,10 @@ function addPlaylist(id, name, author) {
   if ($(selector).length === 0) {
     addScore(id, name, author);
   } else {
-    var thumbsUp = $(selector).find("#thumbs-up");
-    if (thumbsUp.hasClass("fa-thumbs-o-up")) {
-      thumbsUp.removeClass("fa-thumbs-o-up");
-      thumbsUp.addClass("fa-thumbs-up");
+    var thumbsUpSelector = $(selector).find("#thumbs-up");
+    if (thumbsUpSelector.hasClass("fa-thumbs-o-up")) {
+      thumbsUpSelector.removeClass("fa-thumbs-o-up");
+      thumbsUpSelector.addClass("fa-thumbs-up");
       thumbsUp($(this).parents(".playlist-item").attr("id"));
     }
   }
@@ -120,13 +120,13 @@ function addScore(id, name, author) {
   } else {
     var clone = $("#blank-song").clone();
     clone.attr("id", id);
-    if (name.length >= 18) {
-      clone.find("#name").text(name.substring(0, 15) + "...");
+    if (name.length >= 19) {
+      clone.find("#name").text(name.substring(0, 16) + "...");
     } else {
       clone.find("#name").text(name);
     }
-    if (author.length >= 13) {
-      clone.find("#author").text(author.substring(0, 10) + "...");
+    if (author.length >= 23) {
+      clone.find("#author").text(author.substring(0, 20) + "...");
     } else {
       clone.find("#author").text(author);
     }
@@ -462,14 +462,14 @@ function loadPlaylist() {
  */
 function loadRandomVotes(number, maxVotes){
   $('.song-item').sort(function(){
-    return Math.round(Math.random())-0.5
+    return Math.round(Math.random())-0.5;
   }).slice(0, number).each(function () {
       var id = $(this).attr("id") + "-song";
       var name = $(this).find("#name").text();
       var author = $(this).find("#author").text();
       // Add as many score as requested
       for(var i = 0; i < randomInt(0, maxVotes); i++){
-        addScore(id, author, name);
+        addScore(id, name, author);
       }
       // Remove the thumbs up
       var element = $('#'+id).find("#thumbs-up");

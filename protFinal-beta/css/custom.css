@@ -43,6 +43,8 @@
 
 .bordered-text-order, .bordered-text-game, .bordered-text-song {
 	text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+  padding-left: 20px;
+  padding-right: 15px;
 }
 
 .bold-text {

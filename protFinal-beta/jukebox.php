@@ -118,11 +118,11 @@
             <?php print_songs($top); ?>
           </div>
         </div>
-<!--        <div id="classic" class="song-menu song-section hidden">-->
-<!--          --><?php //print_sort_button(); ?>
-<!--          <h2 id="name" class="text-white bordered-text-song">Clássica</h2>-->
-<!--          --><?php //print_songs($classic); ?>
-<!--        </div>-->
+<!--      <div id="classic" class="song-menu song-section hidden">-->
+            <?php //print_sort_button(); ?>
+<!--        <h2 id="name" class="text-white bordered-text-song">Clássica</h2>-->
+            <?php //print_songs($classic); ?>
+<!--      </div>-->
         <div id="rock" class="song-menu song-section hidden">
           <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-song">Rock</h2>
@@ -155,10 +155,10 @@
         <div id="playlist" class="playlist">
           <div id="blank-song" class="col-md-12 playlist-item">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-7 text-center">
+              <div class="col-md-7 text-center no-padding" style="position:relative; top:-8px;">
                 <h4 id="name" class="text-white bordered-text inline">Blank Name</h4>
-                <h4 class="text-white bordered-text inline"> - </h4>
-                <h4 id="author" class="text-white bordered-text inline">Blank Author</h4>
+                <br>
+                <h5 id="author" class="text-white bordered-text inline">Blank Author</h5>
               </div>
               <div class="col-md-5 text-center">
                 <span id="thumbs-down" class="fa fa-thumbs-o-down fa-2x fa-inverse bordered-text pull-left align-icon cart-remove"></span>

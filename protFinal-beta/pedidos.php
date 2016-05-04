@@ -171,7 +171,7 @@
         <div id="orders" class="orders">
           <div id="blank-order" class="col-md-12 order">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-5 text-center">
+              <div class="col-md-5 text-center no-padding">
                 <h4 id="name" class="text-white bordered-text inline">Blank test order!</h4>
               </div>
               <div class="col-md-7">

@@ -124,7 +124,7 @@
         <div id="open-games" class="games">
           <div id="blank-game" class="col-md-12 open-game">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-8 text-center">
+              <div class="col-md-8 text-center no-padding">
                 <h4 id="game-title" class="text-white bordered-text inline">Empty Open Game</h4>
               </div>
               <div class="col-md-4">
