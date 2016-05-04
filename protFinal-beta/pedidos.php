@@ -1,50 +1,50 @@
 <?php
   $foods = array(
-    "hamburger" => array("Hamburger", "hamburger.png", "12€"),
-    "steak" => array("Steak", "hamburger.png", "7€"),
-    "pizza" => array("Pizza", "hamburger.png", "9€"),
-    "chips" => array("Chips", "hamburger.png", "9€"),
-    "nachos" => array("Nachos", "hamburger.png", "9€"),
-    "mozzarella_sticks" => array("Mozzarella Sticks", "hamburger.png", "9€"),
-    "onion_rings" => array("Onion Rings", "hamburger.png", "9€"),
-    //"chicken_wings" => array("Chicken Wings", "hamburger.png", "9€"),
-    "grilled_cheese_sandwich" => array("Grilled Cheese Sandwich", "hamburger.png", "9€"),
-    "calamari" => array("Calamari", "hamburger.png", "9€"),
-    "empty_plate" => array("Empty Plate", "hamburger.png", "99€")
+    "hamburger" => array("Hamburguer", "food/hamburger.png", "12€"),
+    "steak" => array("Bife", "food/steak.png", "7€"),
+    "pizza" => array("Pizza", "food/pizza.png", "9€"),
+    "chips" => array("Batatas Fritas", "food/chips.png", "9€"),
+    "nachos" => array("Nachos", "food/nachos.png", "9€"),
+    "mozzarella_sticks" => array("Paus de Mozzarella", "food/mozzarella_sticks.png", "9€"),
+    "onion_rings" => array("Aneis de Cebola", "food/onion_rings.png", "9€"),
+    //"chicken_wings" => array("Asas de Galinha", "hamburger.png", "9€"),
+    "grilled_cheese_sandwich" => array("Sanduíche de Queijo Grelhado", "food/grilled_cheese_sandwich.png", "9€"),
+    "calamari" => array("Calamari", "food/calamari.png", "9€"),
+    "empty_plate" => array("Prato Vazio", "food/empty_plate.png", "99€")
   );
 
   $drinks = array(
-    "beer" => array("Beer", "hamburger.png", "19€"),
-    "gin" => array("Gin", "hamburger.png", "21€"),
-    "tequila" => array("Tequila", "hamburger.png", "15€"),
-    "vodka" => array("Vodka", "hamburger.png", "6€"),
-    "rum" => array("Rum", "hamburger.png", "17€"),
-    "absinthe" => array("Absinthe", "hamburger.png", "21€"),
-    "whisky" => array("Whisky", "hamburger.png", "21€"),
-    "armagnac" => array("Armagnac", "hamburger.png", "21€"),
-    "cognac" => array("Cognac", "hamburger.png", "21€"),
-    "champagne" => array("Champagne", "hamburger.png", "21€"),
-    "apple_cider" => array("Apple Cider", "hamburger.png", "21€"),
-    "sake" => array("Sake", "hamburger.png", "21€"),
-    "manhattan" => array("Manhattan", "hamburger.png", "21€"),
-    "bourbon" => array("Bourbon", "hamburger.png", "21€"),
-    "martini" => array("Martini", "hamburger.png", "21€"),
-    "tom_collins" => array("Tom Collins", "hamburger.png", "21€"),
-    "daiquiri" => array("Daiquiri", "hamburger.png", "21€"),
-    "mojito" => array("Mojito", "hamburger.png", "21€"),
-    "pina_colada" => array("Piña Colada", "hamburger.png", "21€"),
-    "bloody_mary" => array("Bloody Mary", "hamburger.png", "21€"),
-    "appletini" => array("Appletini", "hamburger.png", "21€"),
-    "cosmopolitan" => array("Cosmopolitan", "hamburger.png", "21€"),
-    "sex_on_the_beach" => array("Sex on the Beach", "hamburger.png", "21€"),
-    "margarita" => array("Margarita", "hamburger.png", "21€"),
-    "red_wine" => array("Red Wine", "hamburger.png", "21€"),
-    "white_wine" => array("White Wine", "hamburger.png", "8€"),
-    "empty_cup" => array("Empty Cup", "hamburger.png", "99€")
+    "beer" => array("Cerveja", "drinks/beer.png", "19€"),
+    "gin" => array("Gin", "drinks/gin.png", "21€"),
+    "tequila" => array("Tequila", "drinks/tequila.png", "15€"),
+    "vodka" => array("Водка", "drinks/vodka.png", "6€"),
+    "rum" => array("Rum", "drinks/rum.png", "17€"),
+    "absinthe" => array("Absinto", "drinks/absinthe.png", "21€"),
+    "whisky" => array("Uísque", "drinks/whisky.png", "21€"),
+    "armagnac" => array("Armagnac", "drinks/armagnac.png", "21€"),
+    "cognac" => array("Conhaque", "drinks/cognac.png", "21€"),
+    "champagne" => array("Champanhe", "drinks/champagne.png", "21€"),
+    "apple_cider" => array("Cidra de Maçã", "drinks/apple_cider.png", "21€"),
+    "sake" => array("Sake", "drinks/sake.png", "21€"),
+    "manhattan" => array("Manhattan", "drinks/manhattan.png", "21€"),
+    "bourbon" => array("Bourbon", "drinks/bourbon.png", "21€"),
+    "martini" => array("Martim", "drinks/martini.png", "21€"),
+    "tom_collins" => array("Tomás Collins", "drinks/tom_collins.png", "21€"),
+    "daiquiri" => array("Daiquiri", "drinks/daiquiri.png", "21€"),
+    "mojito" => array("Mojito", "drinks/mojito.png", "21€"),
+    "pina_colada" => array("Piña Colada", "drinks/pina_colada.png", "21€"),
+    "bloody_mary" => array("Maria Sangrenta", "drinks/bloody_mary.png", "21€"),
+    "appletini" => array("Maçãini", "drinks/appletini.png", "21€"),
+    "cosmopolitan" => array("Cosmopolita", "drinks/cosmopolitan.png", "21€"),
+    "sex_on_the_beach" => array("Sexo na Praia", "drinks/sex_on_the_beach.png", "21€"),
+    "margarita" => array("Margarida", "drinks/margarita.png", "21€"),
+    "red_wine" => array("Vinho Vermelho", "drinks/red_wine.png", "21€"),
+    "white_wine" => array("Vinho Branco", "drinks/white_wine.png", "8€"),
+    "empty_cup" => array("Copo Vazio", "drinks/empty_cup.png", "99€")
   );
 
   $others = array(
-    "box" => array("Box", "hamburger.png", "0.01€")
+    "box" => array("Caixa", "other/box.png", "0.01€")
   );
 
   function get_random($source, $amount){
