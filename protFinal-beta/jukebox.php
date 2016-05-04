@@ -1,10 +1,10 @@
 <?php
-  $classic = array(
-    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
-    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
-    "song3" => array("song3", "Dark_Side_of_the_Moon.png", "author3", "2010"),
-    "song4" => array("song4", "Dark_Side_of_the_Moon.png", "author4", "2007")
-  );
+//  $classic = array(
+//    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
+//    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
+//    "song3" => array("song3", "Dark_Side_of_the_Moon.png", "author3", "2010"),
+//    "song4" => array("song4", "Dark_Side_of_the_Moon.png", "author4", "2007")
+//  );
 
   $rock = array(
     "song5" => array("You Shook Me", "music/lz.png", "Led Zeppelin", "1969"),
@@ -34,13 +34,13 @@
     return $random;
   }
 
-  $top_classic = get_random($classic, 2);
-  $top_rock = get_random($rock, 2);
-  $top_punk = get_random($punk, 2);
-  $top_pop = get_random($pop, 2);
-  $top = array_merge($top_classic, $top_rock, $top_punk, $top_pop);
+//  $top_classic = get_random($classic, 2);
+  $top_rock = get_random($rock, 3);
+  $top_punk = get_random($punk, 3);
+  $top_pop = get_random($pop, 3);
+  $top = array_merge($top_rock, $top_punk, $top_pop);
 
-  $all = array_merge($classic, $rock, $punk, $pop);
+  $all = array_merge($rock, $punk, $pop);
 
   function print_songs($songs){
     foreach ($songs as $id => $details): ?>
@@ -87,11 +87,11 @@
             <span class="fa fa-star fa-2x fa-inverse bordered-text pull-left align-icon"></span>
             <span><h4 id="main-option" class="text-white bordered-text-small inline active-option">Geral</h4></span>
           </div>
-          <br>
-          <div class="sidemenu-item" onClick="showClassic()">
-            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
-            <span><h4 id="classic-option" class="text-white bordered-text-small inline">Clássica</h4></span>
-          </div>
+<!--          <br>-->
+<!--          <div class="sidemenu-item" onClick="showClassic()">-->
+<!--            <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>-->
+<!--            <span><h4 id="classic-option" class="text-white bordered-text-small inline">Clássica</h4></span>-->
+<!--          </div>-->
           <br>
           <div class="sidemenu-item" onClick="showRock()">
             <span class="fa fa-music fa-2x fa-inverse bordered-text pull-left align-icon"></span>
@@ -118,11 +118,11 @@
             <?php print_songs($top); ?>
           </div>
         </div>
-        <div id="classic" class="song-menu song-section hidden">
-          <?php print_sort_button(); ?>
-          <h2 id="name" class="text-white bordered-text-song">Clássica</h2>
-          <?php print_songs($classic); ?>
-        </div>
+<!--        <div id="classic" class="song-menu song-section hidden">-->
+<!--          --><?php //print_sort_button(); ?>
+<!--          <h2 id="name" class="text-white bordered-text-song">Clássica</h2>-->
+<!--          --><?php //print_songs($classic); ?>
+<!--        </div>-->
         <div id="rock" class="song-menu song-section hidden">
           <?php print_sort_button(); ?>
           <h2 id="name" class="text-white bordered-text-song">Rock</h2>

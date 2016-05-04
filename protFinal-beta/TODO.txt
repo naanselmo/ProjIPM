@@ -2,13 +2,13 @@
 
 -> Sort por votos - DONE
 -> Adicionar sort ao geral/recomendado (unico botao, sort ambos recomendados e top) - DONE
--> Votos predefinidos/gerados automaticamente na Jukebox
+-> Votos predefinidos/gerados automaticamente na Jukebox - DONE
 
 
 // Integração
 
--> Settings - Tirar o botao xD
--> Traduções - Done
+-> Settings - DONE - Ideias??
+-> Traduções - DONE
 -> Medições
 -> Imagens - DONE
 -> Arranjar overflows de texto

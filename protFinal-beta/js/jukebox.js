@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   // Load last saved playlist
   loadPlaylist();
+  sortPlaylistByVotesAscendant();
 
   // Key up event for search bar
   // If dynamic it's true it will search while typing, otherwise it will search on enter.
@@ -109,8 +110,6 @@ function addPlaylist(id, name, author) {
       thumbsUp($(this).parents(".playlist-item").attr("id"));
     }
   }
-  sortPlaylistByVotesAscendant();
-  savePlaylist();
 }
 
 function addScore(id, name, author) {
@@ -451,6 +450,42 @@ function loadPlaylist() {
     $('#playlist').html(loaded_html);
   } else {
     console.log('Invalid list loaded. Resetting...');
+    // Make some random votes
+    loadRandomVotes(randomInt(2, 5), 5);
   }
 }
 
+/**
+ * Loads random votes
+ * @param number of songs.
+ * @param maxVotes Maximum numbers of vote a song can have.
+ */
+function loadRandomVotes(number, maxVotes){
+  $('.song-item').sort(function(){
+    return Math.round(Math.random())-0.5
+  }).slice(0, number).each(function () {
+      var id = $(this).attr("id") + "-song";
+      var name = $(this).find("#name").text();
+      var author = $(this).find("#author").text();
+      // Add as many score as requested
+      for(var i = 0; i < randomInt(0, maxVotes); i++){
+        addScore(id, author, name);
+      }
+      // Remove the thumbs up
+      var element = $('#'+id).find("#thumbs-up");
+      element.removeClass("fa-thumbs-up");
+      element.addClass("fa-thumbs-o-up");
+  });
+  sortPlaylistByVotesAscendant();
+}
+
+/**
+ * Finds a random int
+ * @param min value
+ * @param max value
+ * @returns {number} generated number
+ */
+function randomInt(min,max)
+{
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
