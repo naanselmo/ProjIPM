@@ -1,30 +1,30 @@
 <?php
   $classic = array(
-    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
-    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
-    "song3" => array("song3", "Dark_Side_of_the_Moon.png", "author3", "2010"),
-    "song4" => array("song4", "Dark_Side_of_the_Moon.png", "author4", "2007")
+    "song1" => array("song1", "music/Dark_Side_of_the_Moon.png", "author1", "2015"),
+    "song2" => array("song2", "music/Dark_Side_of_the_Moon.png", "author2", "2015"),
+    "song3" => array("song3", "music/Dark_Side_of_the_Moon.png", "author3", "2010"),
+    "song4" => array("song4", "music/Dark_Side_of_the_Moon.png", "author4", "2007")
   );
 
   $rock = array(
-    "song5" => array("song5", "Dark_Side_of_the_Moon.png", "author1", "2006"),
-    "song6" => array("song6", "Dark_Side_of_the_Moon.png", "author2", "2010"),
-    "song7" => array("song7", "Dark_Side_of_the_Moon.png", "author3", "2015"),
-    "song8" => array("song8", "Dark_Side_of_the_Moon.png", "author4", "2010")
+    "song5" => array("You Shook Me", "music/lz.png", "Led Zeppelin", "1969"),
+    "song6" => array("A Kind Of Magic", "music/qn.png", "Queen", "1991"),
+    "song7" => array("Dani California", "music/rhcp.png", "Red Hot Chili Peppers", "2006"),
+    "song8" => array("Drive My Car", "music/tb.png", "The Beatles", "1965")
   );
 
   $punk = array(
-    "song9" => array("song9", "Dark_Side_of_the_Moon.png", "author1", "2003"),
-    "song10" => array("song10", "Dark_Side_of_the_Moon.png", "author2", "2011"),
-    "song11" => array("song11", "Dark_Side_of_the_Moon.png", "author3", "2010"),
-    "song12" => array("song12", "Dark_Side_of_the_Moon.png", "author4", "2003")
+    "song9" => array("California über alles", "music/dk.png", "Dead Kennedys", "1980"),
+    "song10" => array("White Christmas", "music/br.png", "Bad Religion", "2013"),
+    "song11" => array("Anarchy in the U.K.", "music/sp.png", "Sex Pistols", "1977"),
+    "song12" => array("Indestructible", "music/rd.png", "Rancid", "2003")
   );
 
   $pop = array(
-    "song13" => array("song13", "Dark_Side_of_the_Moon.png", "author", "2013"),
-    "song14" => array("song14", "Dark_Side_of_the_Moon.png", "author", "2005"),
-    "song15" => array("song15", "Dark_Side_of_the_Moon.png", "author", "2006"),
-    "song16" => array("song16", "Dark_Side_of_the_Moon.png", "author", "2005")
+    "song13" => array("Perfect", "music/1d.png", "One Direction", "2015"),
+    "song14" => array("Surfer Girl", "music/bb.png", "The Beach Boys", "1963"),
+    "song15" => array("Nicotine", "music/pd.png", "Panic! at the Disco", "2013"),
+    "song16" => array("Maps", "music/m5.png", "Maroon 5", "2014")
   );
 
   function get_random($source, $amount){
@@ -112,7 +112,6 @@
 
       <div id="middle" class="col-md-7">
         <div id="main" class="song-menu">
-          <?php print_sort_button(); ?>
           <div class="col-md-12 no-padding song-section">
             <h2 id="name" class="text-white bordered-text-song">Mais populares</h2>
             <?php print_songs($top); ?>
