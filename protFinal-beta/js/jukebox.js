@@ -2,7 +2,7 @@ var total, lastActiveMenuBeforeSearch;
 
 $(document).ready(function () {
   $(".song-item").click(function (e) {
-    addSong($(this).attr("id") + "-song", $(this).find("#name").text(), $(this).find("#author").text());
+    addPlaylist($(this).attr("id") + "-song", $(this).find("#name").text(), $(this).find("#author").text());
   });
 
   // Key up event for search bar
@@ -44,11 +44,75 @@ $(document).ready(function () {
   });
 });
 
-function addSong(id, name, author) {
+$(document).on("click", ".fa-thumbs-o-down", function (e) {
+  $(this).removeClass("fa-thumbs-o-down");
+  $(this).addClass("fa-thumbs-down");
+  thumbsDown($(this).parents(".playlist-item").attr("id"));
+});
+
+$(document).on("click", ".fa-thumbs-down", function (e) {
+  $(this).removeClass("fa-thumbs-down");
+  $(this).addClass("fa-thumbs-o-down");
+  addScore($(this).parents(".playlist-item").attr("id"));
+});
+
+$(document).on("click", ".fa-thumbs-o-up", function (e) {
+  $(this).removeClass("fa-thumbs-o-up");
+  $(this).addClass("fa-thumbs-up");
+  thumbsUp($(this).parents(".playlist-item").attr("id"));
+});
+
+$(document).on("click", ".fa-thumbs-up", function (e) {
+  $(this).removeClass("fa-thumbs-up");
+  $(this).addClass("fa-thumbs-o-up");
+  removeScore($(this).parents(".playlist-item").attr("id"));
+});
+
+function thumbsUp(id, name, author) {
+  addScore(id, name, author);
+
+  var selector = "#" + id;
+  var thumbsDown = $(selector).find(".fa-thumbs-down");
+  console.log(thumbsDown);
+  if (thumbsDown.length) {
+    thumbsDown.removeClass("fa-thumbs-down");
+    thumbsDown.addClass("fa-thumbs-o-down");
+    addScore(id, name, author);
+  }
+}
+
+function thumbsDown(id, name, author) {
+  removeScore(id, name, author);
+
+  var selector = "#" + id;
+  var thumbsUp = $(selector).find(".fa-thumbs-up");
+  if (thumbsUp.length) {
+    thumbsUp.removeClass("fa-thumbs-up");
+    thumbsUp.addClass("fa-thumbs-o-up");
+    removeScore(id, name, author);
+  }
+}
+
+function addPlaylist(id, name, author) {
+  var selector = "#" + id;
+
+  if ($(selector).length === 0) {
+    addScore(id, name, author);
+  } else {
+    var thumbsUp = $(selector).find("#thumbs-up");
+    if (thumbsUp.hasClass("fa-thumbs-o-up")) {
+      thumbsUp.removeClass("fa-thumbs-o-up");
+      thumbsUp.addClass("fa-thumbs-up");
+      thumbsUp($(this).parents(".playlist-item").attr("id"));
+    }
+  }
+}
+
+function addScore(id, name, author) {
   var selector = "#" + id;
   if ($(selector).length) {
-    var count = $(selector).find("#count");
-    $(selector).find("#count").text(Number(count.text()) + 1);
+    var score = $(selector).find("#score");
+    $(selector).find("#score").text(Number(score.text()) + 1);
   } else {
     var clone = $("#blank-song").clone();
     clone.attr("id", id);
@@ -63,6 +127,16 @@ function addSong(id, name, author) {
       clone.find("#author").text(author);
     }
     clone.appendTo("#playlist");
+  }
+}
+
+function removeScore(id) {
+  var selector = "#" + id;
+  var score = $(selector).find("#score");
+  if (score.text() > 0) {
+    score.text(Number(score.text()) - 1);
+  } else {
+    $(selector).remove();
   }
 }
 

@@ -154,10 +154,15 @@
         <div id="playlist" class="playlist">
           <div id="blank-song" class="col-md-12 playlist-item">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
-              <div class="col-md-12 text-center">
+              <div class="col-md-7 text-center">
                 <h4 id="name" class="text-white bordered-text inline">Blank Name</h4>
                 <h4 class="text-white bordered-text inline"> - </h4>
                 <h4 id="author" class="text-white bordered-text inline">Blank Author</h4>
+              </div>
+              <div class="col-md-5 text-center">
+                <span id="thumbs-down" class="fa fa-thumbs-o-down fa-2x fa-inverse bordered-text pull-left align-icon cart-remove"></span>
+                <span><h4 id="score" class="text-white bordered-text inline">1</h4></span>
+                <span id="thumbs-up" class="fa fa-thumbs-up fa-2x fa-inverse bordered-text pull-right align-icon cart-add"></span>
               </div>
             </div>
           </div>
