@@ -84,6 +84,7 @@
 
       <div id="middle" class="col-md-7">
         <div id="main" class="game-menu">
+          <?php print_sort_button(); ?>
           <div class="col-md-12 no-padding games-section">
             <h2 id="name" class="text-white bordered-text-games">Recomendados</h2>
             <?php print_games($highlights); ?>

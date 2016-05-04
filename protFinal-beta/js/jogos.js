@@ -17,8 +17,8 @@ $(document).ready(function () {
 
   // Add change listener to sort select.
   $(".sort-select").change(function (event) {
-    // Get the id of the section where the select that fired the event is.
-    var section_id = $(this).parents('.games-section').attr("id");
+    // Get the id of the menu where the select that fired the event is.
+    var section_id = $(this).parents('.game-menu').attr("id");
     // Get the selected value.
     var selected_value = $(this).val();
     // Fetch the arguments of the sort functions.
@@ -193,12 +193,13 @@ function search(search) {
 }
 
 /**
- * Sorts all game-sections by name.
- * @param game_section_id The id of the section to order.
+ * Sorts all game-sections by name within a game menu.
+ * @param game_menu_id The id of the game menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByName(game_section_id, asc) {
-  $('#'+game_section_id).each(function () {
+function sortByName(game_menu_id, asc) {
+  var childrenAndSelf = $('#' + game_menu_id).children('.games-section').andSelf().filter('.games-section');
+  childrenAndSelf.each(function () {
     $(this).children('.game-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.game-item #name').text();
       var name_b = $(b).find('.game-item #name').text();

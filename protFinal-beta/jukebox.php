@@ -112,6 +112,7 @@
 
       <div id="middle" class="col-md-7">
         <div id="main" class="song-menu">
+          <?php print_sort_button(); ?>
           <div class="col-md-12 no-padding song-section">
             <h2 id="name" class="text-white bordered-text-song">Mais populares</h2>
             <?php print_songs($top); ?>

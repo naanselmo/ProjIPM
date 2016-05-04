@@ -1,7 +1,7 @@
 ﻿// Melhoria de Funcionalidade 3
 
 -> Sort por votos
--> Adicionar sort ao geral/recomendado (unico botao, sort ambos recomendados e top)
+-> Adicionar sort ao geral/recomendado (unico botao, sort ambos recomendados e top) - DONE
 -> Votos predefinidos/gerados automaticamente na Jukebox
 
 

@@ -126,6 +126,7 @@
 
       <div id="middle" class="col-md-7">
         <div id="main" class="order-menu">
+          <?php print_sort_button(); ?>
           <div class="col-md-12 no-padding order-section">
             <h2 id="name" class="text-white bordered-text-order">Recomendados</h2>
             <?php print_orders($highlights); ?>

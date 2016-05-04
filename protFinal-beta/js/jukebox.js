@@ -21,8 +21,8 @@ $(document).ready(function () {
 
   // Add change listener to sort select.
   $(".sort-select").change(function (event) {
-    // Get the id of the section where the select that fired the event is.
-    var section_id = $(this).parents('.song-section').attr("id");
+    // Get the id of the menu where the select that fired the event is.
+    var section_id = $(this).parents('.song-menu').attr("id");
     // Get the selected value.
     var selected_value = $(this).val();
     // Fetch the arguments of the sort functions.
@@ -292,12 +292,13 @@ function search(search) {
 }
 
 /**
- * Sorts all song-sections by name.
- * @param song_section_id The id of the section to order.
+ * Sorts all song-sections by name within a given song-menu.
+ * @param song_menu_id The id of the menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByName(song_section_id, asc) {
-  $('#'+song_section_id).each(function () {
+function sortByName(song_menu_id, asc) {
+  var childrenAndSelf = $('#' + song_menu_id).children('.song-section').andSelf().filter('.song-section');
+  childrenAndSelf.each(function () {
     $(this).children('.song-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.song-item #name').text();
       var name_b = $(b).find('.song-item #name').text();
@@ -307,12 +308,13 @@ function sortByName(song_section_id, asc) {
 }
 
 /**
- * Sorts all song-sections by author.
- * @param song_section_id The id of the section to order.
+ * Sorts all song-sections by author within a given song-menu.
+ * @param song_menu_id The id of the menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByAuthor(song_section_id, asc) {
-  $('#'+song_section_id).each(function () {
+function sortByAuthor(song_menu_id, asc) {
+  var childrenAndSelf = $('#' + song_menu_id).children('.song-section').andSelf().filter('.song-section');
+  childrenAndSelf.each(function () {
     $(this).children('.song-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.song-item #author').text();
       var name_b = $(b).find('.song-item #author').text();
@@ -322,12 +324,13 @@ function sortByAuthor(song_section_id, asc) {
 }
 
 /**
- * Sorts all song-sections by date.
- * @param song_section_id The id of the section to order.
+ * Sorts all song-sections by date within a given song-menu.
+ * @param song_menu_id The id of the menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByDate(song_section_id, asc) {
-  $('#'+song_section_id).each(function () {
+function sortByDate(song_menu_id, asc) {
+  var childrenAndSelf = $('#' + song_menu_id).children('.song-section').andSelf().filter('.song-section');
+  childrenAndSelf.each(function () {
     $(this).children('.song-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.song-item #date').text();
       var name_b = $(b).find('.song-item #date').text();

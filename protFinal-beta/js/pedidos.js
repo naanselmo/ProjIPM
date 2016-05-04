@@ -25,8 +25,8 @@ $(document).ready(function () {
 
   // Add change listener to sort select.
   $(".sort-select").change(function (event) {
-    // Get the id of the section where the select that fired the event is.
-    var section_id = $(this).parents('.order-section').attr("id");
+    // Get the id of the menu where the select that fired the event is.
+    var order_menu_id = $(this).parents('.order-menu').attr("id");
     // Get the selected value.
     var selected_value = $(this).val();
     // Fetch the arguments of the sort functions.
@@ -37,10 +37,10 @@ $(document).ready(function () {
     // Sort based on the parameters fetched.
     switch (type){
       case 'price':
-        sortByPrice(section_id, asc);
+        sortByPrice(order_menu_id, asc);
         break;
       case 'name':
-        sortByName(section_id, asc);
+        sortByName(order_menu_id, asc);
     }
   });
 });
@@ -329,12 +329,13 @@ function search(search) {
 }
 
 /**
- * Sorts all order-sections by name.
- * @param order_section_id The id of the section to order.
+ * Sorts all order-sections by name within a order-menu.
+ * @param order_menu_id The id of the menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByName(order_section_id, asc) {
-  $('#'+order_section_id).each(function () {
+function sortByName(order_menu_id, asc) {
+  var childrenAndSelf = $('#' + order_menu_id).children('.order-section').andSelf().filter('.order-section');
+  childrenAndSelf.each(function () {
     $(this).children('.order-item-wrapper').sort(function (a, b) {
       var name_a = $(a).find('.order-item #name').text();
       var name_b = $(b).find('.order-item #name').text();
@@ -344,12 +345,13 @@ function sortByName(order_section_id, asc) {
 }
 
 /**
- * Sorts all order-sections by price.
- * @param order_section_id The id of the section to order.
+ * Sorts all order-sections by price within a order-menu.
+ * @param order_menu_id The id of the menu to order.
  * @param asc Either 1 or -1. 1 means sorted by asc order. -1 means sorted by desc order.
  */
-function sortByPrice(order_section_id, asc) {
-  $('#'+order_section_id).each(function () {
+function sortByPrice(order_menu_id, asc) {
+  var childrenAndSelf = $('#' + order_menu_id).children('.order-section').andSelf().filter('.order-section');
+  childrenAndSelf.each(function () {
     $(this).children('.order-item-wrapper').sort(function (a, b) {
       var price_a = $(a).find('.order-item #price').text();
       var price_b = $(b).find('.order-item #price').text();
