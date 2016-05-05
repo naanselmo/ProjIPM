@@ -7,7 +7,7 @@
     "nachos" => array("Nachos", "food/nachos.png", "9€"),
     "mozzarella_sticks" => array("Paus de Mozzarella", "food/mozzarella_sticks.png", "9€"),
     "onion_rings" => array("Aneis de Cebola", "food/onion_rings.png", "9€"),
-    "hot_wings" => array("Asas Quentes", "food/chicken_wings.png", "9€"),
+    "hot_wings" => array("Asas Quentes", "food/hot_wings.png", "9€"),
     "grilled_cheese_sandwich" => array("Sanduíche de Queijo Grelhado", "food/grilled_cheese_sandwich.png", "9€"),
     "calamari" => array("Calamari", "food/calamari.png", "9€"),
     "empty_plate" => array("Prato Vazio", "food/empty_plate.png", "99€")
