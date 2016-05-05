@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //  $classic = array(
 //    "song1" => array("song1", "Dark_Side_of_the_Moon.png", "author1", "2015"),
 //    "song2" => array("song2", "Dark_Side_of_the_Moon.png", "author2", "2015"),
@@ -80,7 +80,7 @@
       <div id="left" class="col-md-2 align-middleisher">
         <div class="col-md-offset-1 col-md-10 col-md-offset-1">
           <div class="sidemenu-item">
-            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'/>
+            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome' onfocus="show_keyboard()" onblur="hide_keyboard()"/>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showMain()">

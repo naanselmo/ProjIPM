@@ -1,4 +1,4 @@
-<style>
+﻿<style>
     #popup-text{
         max-height: 30%;
         overflow: auto;
@@ -41,6 +41,12 @@
         <div class="panel padded-large border-black semi-transparent-grey">
             <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
     </div>
+    </div>
+</div>
+
+<div id="keyboard" class="hidden" style="position:absolute; bottom:50px; z-index:2">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+        <img class="img-responsive" src="images/keyboard.png">
     </div>
 </div>
 
@@ -88,7 +94,6 @@
     function show_popup() {
         if ($("#background-filter").hasClass("hidden")) {
             $("#background-filter").toggleClass("hidden");
-            // fadeIn();
         }
     }
 
@@ -98,7 +103,24 @@
     function hide_popup() {
         if (!$("#background-filter").hasClass("hidden")) {
             $("#background-filter").toggleClass("hidden");
-            // fadeOut();
+        }
+    }
+
+    /**
+     * Hides the keyboard
+     */
+    function hide_keyboard() {
+        if (!$("#keyboard").hasClass("hidden")) {
+            $("#keyboard").toggleClass("hidden");
+        }
+    }
+
+    /**
+     * Shows the keyboard.
+     */
+    function show_keyboard() {
+        if ($("#keyboard").hasClass("hidden")) {
+            $("#keyboard").toggleClass("hidden");
         }
     }
 </script>

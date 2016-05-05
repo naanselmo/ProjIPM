@@ -1,4 +1,4 @@
-var total, lastActiveMenuBeforeSearch;
+﻿var total, lastActiveMenuBeforeSearch;
 
 $(document).ready(function () {
   $(".order-item").click(function (e) {
@@ -61,8 +61,8 @@ function addOrder(id, name, price) {
   } else {
     var clone = $("#blank-order").clone();
     clone.attr("id", id);
-    if (name.length >= 13) {
-      clone.find("#name").text(name.substring(0, 10) + "...");
+    if (name.length >= 12) {
+      clone.find("#name").text(name.substring(0, 9) + "...");
     } else {
       clone.find("#name").text(name);
     }

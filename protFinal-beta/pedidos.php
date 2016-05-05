@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   $foods = array(
     "hamburger" => array("Hamburguer", "food/hamburger.png", "12€"),
     "steak" => array("Bife", "food/steak.png", "7€"),
@@ -7,7 +7,7 @@
     "nachos" => array("Nachos", "food/nachos.png", "9€"),
     "mozzarella_sticks" => array("Paus de Mozzarella", "food/mozzarella_sticks.png", "9€"),
     "onion_rings" => array("Aneis de Cebola", "food/onion_rings.png", "9€"),
-    //"chicken_wings" => array("Asas de Galinha", "hamburger.png", "9€"),
+    "hot_wings" => array("Asas Quentes", "food/chicken_wings.png", "9€"),
     "grilled_cheese_sandwich" => array("Sanduíche de Queijo Grelhado", "food/grilled_cheese_sandwich.png", "9€"),
     "calamari" => array("Calamari", "food/calamari.png", "9€"),
     "empty_plate" => array("Prato Vazio", "food/empty_plate.png", "99€")
@@ -44,7 +44,7 @@
   );
 
   $others = array(
-    "box" => array("Caixa", "other/box.png", "0.01€")
+    "box" => array("Caixa", "other/box.png", "99€")
   );
 
   function get_random($source, $amount){
@@ -99,7 +99,7 @@
       <div id="left" class="col-md-2 align-middleish">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <div class="sidemenu-item">
-            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'/>
+            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome' onfocus="show_keyboard()" onblur="hide_keyboard()"/>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showMain()">

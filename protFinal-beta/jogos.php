@@ -1,7 +1,7 @@
-<?php
+﻿<?php
   $singleplayer = array(
     "bubbles" => array("Bolhinhas", "games/bubbles.png"),
-    "flappy_bird" => array("Pássaro Flappy", "games/flappy_bird.png"),
+    "flappy_bird" => array("Pássaro Flapejante", "games/flappy_bird.png"),
     "pacman" => array("Homem do Pac", "games/pacman.png"),
     "space_invaders" => array("Invasores do Espaço", "games/space_invaders.png")
   );
@@ -62,7 +62,7 @@
       <div id="left" class="col-md-2 align-middleish">
         <div class="col-md-offset-1 col-md-10 col-md-offset-1">
           <div class="sidemenu-item">
-            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome'/>
+            <input id="search" class="form-control" type="text" placeholder="&#xF002; Search" style='font-family:"Helvetica Neue",Helvetica,Arial,sans-serif, FontAwesome' onfocus="show_keyboard()" onblur="hide_keyboard()"/>
           </div>
           <br>
           <div class="sidemenu-item" onClick="showMain()">
