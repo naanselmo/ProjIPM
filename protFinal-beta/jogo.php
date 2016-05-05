@@ -37,7 +37,7 @@
           <div id="blank-highscore" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
-                <h4 id="highscore-text" class="text-white bordered-text inline">Nuno Anselmo - 100000</h4>
+                <h4 id="highscore-text" class="text-white bordered-text inline">Grupo 3 - 123456789</h4>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
           <div id="guilherme-serpa" class="col-md-12 highscore">
             <div class="panel padded-small border-black semi-transparent-white rounded-corner-smaller cart-item">
               <div class="col-md-12 text-center">
-                <h4 id="highscore-text" class="text-white bordered-text inline">Guilherme Serpa - 1</h4>
+                <h4 id="highscore-text" class="text-white bordered-text inline">Guilherme Serpa - 99998</h4>
               </div>
             </div>
           </div>

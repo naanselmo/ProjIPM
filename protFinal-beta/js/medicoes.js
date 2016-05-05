@@ -73,9 +73,9 @@ function setHeartrate(heartrate) {
 	} else if (heartrate < 120) {
 		$('#heartrate-description').text("Ritmo cardíaco acelerado.");
 	} else if (heartrate < 140) {
-		$('#heartrate-description').text("Ritmo cardíaco demasiado acelerado para situação de repouso.");
+		$('#heartrate-description').text("Ritmo cardíaco demasiado acelerado.");
 	} else {
-		$('#heartrate-description').text("Ritmo cardíaco perigosamente acelerado para situação de repouso.");
+		$('#heartrate-description').text("Ritmo cardíaco perigosamente acelerado.");
 	}
 }
 
