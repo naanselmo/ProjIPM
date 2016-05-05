@@ -7,24 +7,24 @@
 //  );
 
   $rock = array(
-    "song5" => array("You Shook Me", "music/lz.png", "Led Zeppelin", "1969"),
-    "song6" => array("A Kind Of Magic", "music/qn.png", "Queen", "1991"),
+    "song5" => array("Tu Sacudiste-me", "music/lz.png", "Led Zeppelin", "1969"),
+    "song6" => array("Um Tipo de Magia", "music/qn.png", "Queen", "1991"),
     "song7" => array("Dani California", "music/rhcp.png", "Red Hot Chili Peppers", "2006"),
-    "song8" => array("Drive My Car", "music/tb.png", "The Beatles", "1965")
+    "song8" => array("Guia o Meu Carro", "music/tb.png", "The Beatles", "1965")
   );
 
   $punk = array(
-    "song9" => array("California über alles", "music/dk.png", "Dead Kennedys", "1980"),
-    "song10" => array("White Christmas", "music/br.png", "Bad Religion", "2013"),
-    "song11" => array("Anarchy in the U.K.", "music/sp.png", "Sex Pistols", "1977"),
-    "song12" => array("Indestructible", "music/rd.png", "Rancid", "2003")
+    "song9" => array("California Sobre Tudo", "music/dk.png", "Dead Kennedys", "1980"),
+    "song10" => array("Natal Branco", "music/br.png", "Bad Religion", "2013"),
+    "song11" => array("Anarquia no Reino Unido", "music/sp.png", "Sex Pistols", "1977"),
+    "song12" => array("Indestrutível", "music/rd.png", "Rancid", "2003")
   );
 
   $pop = array(
-    "song13" => array("Perfect", "music/1d.png", "One Direction", "2015"),
-    "song14" => array("Surfer Girl", "music/bb.png", "The Beach Boys", "1963"),
-    "song15" => array("Nicotine", "music/pd.png", "Panic! at the Disco", "2013"),
-    "song16" => array("Maps", "music/m5.png", "Maroon 5", "2014")
+    "song13" => array("Perfeito", "music/1d.png", "One Direction", "2015"),
+    "song14" => array("Menina Surfista", "music/bb.png", "The Beach Boys", "1963"),
+    "song15" => array("Nicotina", "music/pd.png", "Panic! at the Disco", "2013"),
+    "song16" => array("Mapas", "music/m5.png", "Maroon 5", "2014")
   );
 
   function get_random($source, $amount){
