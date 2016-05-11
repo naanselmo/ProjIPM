@@ -1,53 +1,53 @@
 <style>
-    #popup-text{
-        max-height: 30%;
-        overflow: auto;
-        font-size: large;
-    }
-    #close{
-        position: absolute; top: 25px; right: 8%;
-    }
-    #popup-title{
-        margin-top: 0;
-    }
-    #background-filter{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-    }
+  #popup-text{
+    max-height: 30%;
+    overflow: auto;
+    font-size: large;
+  }
+  #close{
+    position: absolute; top: 25px; right: 8%;
+  }
+  #popup-title{
+    margin-top: 0;
+  }
+  #background-filter{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
 </style>
 
 <!-- Dimmed background -->
 <div id="background-filter" class="center-wrapper background-filter hidden">
-    <!-- Small Popup -->
-    <div id="small-popup" class="col-md-offset-4 col-md-4 col-md-offset-4 popup align-middle">
-        <div class="panel padded-large border-black semi-transparent-grey">
-            <span id="close" class="fa fa-times fa-3x fa-inverse bordered-text" onclick="hide_popup()"></span>
-            <h1 id="popup-title"></h1>
-            <div id="popup-text">
-            </div>
-        </div>
+  <!-- Small Popup -->
+  <div id="small-popup" class="col-md-offset-4 col-md-4 col-md-offset-4 popup align-middle">
+    <div class="panel padded-large border-black semi-transparent-grey">
+      <span id="close" class="fa fa-times fa-3x fa-inverse bordered-text" onclick="hide_popup()"></span>
+      <h1 id="popup-title"></h1>
+      <div id="popup-text">
+      </div>
     </div>
+  </div>
 
-    <!-- Medium Popup -->
-    <div id="medium-popup" class="col-md-offset-3 col-md-6 col-md-offset-3 popup align-middle hidden">
-        <div class="panel padded-large border-black semi-transparent-grey">
-            <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
-        </div>
+  <!-- Medium Popup -->
+  <div id="medium-popup" class="col-md-offset-3 col-md-6 col-md-offset-3 popup align-middle hidden">
+    <div class="panel padded-large border-black semi-transparent-grey">
+      <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
     </div>
+  </div>
 
-    <!-- Large Popup -->
-    <div id="large-popup" class="col-md-offset-2 col-md-8 col-md-offset-2 popup align-middle hidden">
-        <div class="panel padded-large border-black semi-transparent-grey">
-            <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
+  <!-- Large Popup -->
+  <div id="large-popup" class="col-md-offset-2 col-md-8 col-md-offset-2 popup align-middle hidden">
+    <div class="panel padded-large border-black semi-transparent-grey">
+      <span class="fa fa-times fa-4x fa-inverse bordered-text"></span>
     </div>
-    </div>
+  </div>
 </div>
 
 <div id="keyboard" class="hidden" style="position:absolute; bottom:50px; z-index:2">
-    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-        <img class="img-responsive" src="images/keyboard.png">
-    </div>
+  <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+    <img class="img-responsive" src="images/keyboard.png">
+  </div>
 </div>
 
 <script type="text/javascript">
