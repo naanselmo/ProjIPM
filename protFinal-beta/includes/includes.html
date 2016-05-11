@@ -15,4 +15,9 @@
 <!-- BootstrapSelect -->
 <script src="js/bootstrap-select.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Execute all pending functions, as needed -->
+<script>
+  while (pendingExecution.length){
+    pendingExecution.shift().call();
+  }
+</script>

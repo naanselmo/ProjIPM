@@ -1,13 +1,121 @@
+<style>
+  .progress {
+    background: rgba(80, 80, 80, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    height: 8px;
+  }
+
+  .progress-bar-custom {
+    background: rgba(20, 20, 20, 1);
+  }
+
+  .progress-bar-label {
+    position: relative;
+    top: -13px;
+  }
+
+  .playing-div {
+    height: 96px;
+    background-image: url("images/sound_bars.gif");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 75%;
+    -webkit-filter: brightness(1.5) grayscale(100%);
+    -moz-filter: brightness(1.5) grayscale(100%);
+    -ms-filter: brightness(1.5) grayscale(100%);
+    -o-filter: brightness(1.5) grayscale(100%);
+    filter: brightness(1.5) grayscale(100%);
+  }
+</style>
+
 <header>
-    <h1 id="header-text" class="title-heading">Missing Title!</h1>
+    <!-- Blank space -->
+    <div class="col-md-4"></div>
+
+    <!-- Header -->
+    <div class="col-md-4">
+      <h1 id="header-text" class="title-heading">Missing Title!</h1>
+    </div>
+
+    <!-- Blank space -->
+    <div class="col-md-1"></div>
+
+    <!-- Currently Playing -->
+    <div id="playing" class="col-md-3 playing-div">
+      <!-- <div class="panel padded-small border-black semi-transparent-dark-grey">-->
+      <div style="padding-top:10px">
+        <h4 id="playing-title" class="text-white bordered-text">Anarquia no Reino Unido</h4>
+        <h5 id="playing-author" class="text-white bordered-text">Sex Pistols</h5>
+        <p id="playing-duration-total" class="hidden">211</p>
+        <p id="playing-duration-current" class="hidden">0</p>
+        <div class="pull-left">
+          <h5 id="playing-current" class="text-white progress-bar-label bordered-text">0:00</h5>
+        </div>
+        <div class="col-md-10">
+          <div class="progress">
+            <div id="playing-progressbar" class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="pull-right">
+          <h5 id="playing-total" class="text-white progress-bar-label bordered-text">3:31</h5>
+        </div>
+      </div>
+    </div>
 </header>
 
 <script type="text/javascript">
-    /**
-     * Copies the text into the header.
-     * @param text Text to copy into the header.
-     */
-    function set_header_text(text){
-        $('#header-text').text(text);
+  /**
+   * Copies the text into the header.
+   * @param text Text to copy into the header.
+   */
+  function set_header_text(text){
+    $('#header-text').text(text);
+  }
+
+  function update_progressbar() {
+    $('#playing-progressbar').css('width', 100*Number($('#playing-duration-current').text())/Number($('#playing-duration-total').text()) + '%');
+  }
+
+  function update_timer() {
+    $('#playing-current').text(convert_time(Number($('#playing-duration-current').text())));
+  }
+
+  function convert_time(input) {
+    var minutes = Math.floor(input / 60);
+    var seconds = input - minutes * 60;
+
+    return String(minutes) + ':' + (seconds < 10 ? '0' : '' ) + String(seconds);
+  }
+
+  window.setInterval(function(){
+    if (Number($('#playing-duration-current').text()) >= Number($('#playing-duration-total').text())) {
+      $('#playing-duration-current').text(0);
+    } else {
+      $('#playing-duration-current').text(Number($('#playing-duration-current').text())+1);
     }
+    update_progressbar();
+    update_timer();
+    save_playing();
+  }, 1000);
+
+  /**
+   * Saves the playlist to the local storage.
+   */
+  function save_playing() {
+    localStorage.setItem('currently_playing', $('#playing').html());
+  }
+
+  /**
+   * Loads the playlist from the local storage.
+   */
+  function load_playing() {
+    var loaded_html = localStorage.getItem('currently_playing');
+    // Check if loaded order list exists and has blank-order id somewhere
+    if (loaded_html !== null) {
+      $('#playing').html(loaded_html);
+    }
+  }
+
+  pendingExecution.push(load_playing);
 </script>
